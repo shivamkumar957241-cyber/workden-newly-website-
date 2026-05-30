@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>WorkDen Blog – Work From Home & Online Tasks</title>
+
+<meta name="description" content="WorkDen Blog par work from home, data entry aur online tasks se related genuine guides aur tips milte hain.">
+<meta name="keywords" content="work from home, data entry jobs, online tasks, remote work india, WorkDen blog">
+<meta name="author" content="WorkDen">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- Theme Color (Mobile Browser UI Color) -->
+<meta name="theme-color" content="#1446a0">
+
+<!-- Open Graph (Social Sharing) -->
+<meta property="og:title" content="WorkDen Blog – Work From Home & Online Tasks">
+<meta property="og:description" content="Work from home, data entry aur online tasks ke genuine guides aur tips.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://workden.online/blog.html">
+<meta property="og:image" content="https://workden.online/blog-cover.jpg">
+
+<!-- Preconnect for Faster Font Loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                primary: '#0d3b66',
+                secondary: '#1446a0',
+                accent: '#fca311'
+            },
+            fontFamily: {
+                heading: ['Poppins', 'sans-serif'],
+                body: ['Open Sans', 'sans-serif']
+            }
+        }
+    }
+}
+</script>
+
+    <style>
+:root {
+    --primary-color: #0d3b66;
+    --secondary-color: #1446a0;
+    --accent-color: #fca311;
+    --bg-color: #f4f7fb;
+    --text-color: #334155;
+    --white: #ffffff;
+}
+
+/* Body */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #eef4ff);
+    color: var(--text-color);
+}
+
+/* ================= HERO SECTION ================= */
+
+.blog-hero {
+    background: linear-gradient(135deg, #0e80ea 0%, #1446a0 100%);
+    color: var(--white);
+    padding: 80px 20px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    margin-top: 64px;   /* 🔥 HEADER HEIGHT JITNA */
+}
+
+
+/* Soft Glow Effect */
+.blog-hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    background: rgba(255,255,255,0.08);
+    filter: blur(80px);
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.blog-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.blog-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 18px auto 0;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+    max-width: 1200px;
+    margin: -60px auto 100px;
+    padding: 0 20px;
+}
+
+/* ================= GRID ================= */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 30px;
+}
+
+/* ================= PREMIUM CARD ================= */
+
+.blog-card {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(20px);
+    border-radius: 22px;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.04);
+    position: relative;
+}
+
+/* Glow Hover Effect */
+.blog-card::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(20,70,160,0.15);
+    top: -30px;
+    right: -30px;
+    border-radius: 50%;
+    filter: blur(50px);
+    transition: 0.4s;
+}
+
+.blog-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(13,59,102,0.15);
+}
+
+.blog-card:hover::before {
+    transform: scale(1.2);
+}
+
+/* ================= CARD CONTENT ================= */
+
+.card-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Category Badge */
+.category-badge {
+    background: rgba(252,163,17,0.15);
+    color: #b37400;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    align-self: flex-start;
+}
+
+/* Title */
+.blog-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.35rem;
+    color: var(--primary-color);
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+/* Description */
+.blog-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* Footer */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* Read More */
+.read-more {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    color: var(--accent-color);
+    transform: translateX(4px);
+}
+
+.read-more::after {
+    content: " →";
+    font-size: 1.1rem;
+}
+
+/* Read Time */
+.read-time {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .blog-hero h1 { font-size: 2.2rem; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .container { margin-top: -40px; }
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="fixed w-full top-0 z-50 
+bg-white/25 backdrop-blur-2xl
+border-b border-white/40 
+shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
+transition-all duration-500">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center gap-3">
+                    
+                    <img src="workden-logo.png" 
+                         alt="WorkDen Logo" 
+                         class="h-10 w-auto object-contain">
+
+                    <span class="font-bold text-xl text-gray-900 tracking-tight">
+                        WorkDen
+                    </span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+
+                <a href="index.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                   Home
+                   <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+
+                <a href="services.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Services
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <!-- PRICING UPDATED -->
+                <a href="fees.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Pricing
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="blog.html"
+                   class="relative text-blue-600 transition group">
+                  Blog
+                  <span class="absolute left-0 -bottom-1 w-full h-[2px] bg-blue-600"></span>
+                </a>
+
+                <a href="faq.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    FAQ
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="support.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Support
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <!-- Apply Button -->
+                <a href="apply.html"
+                     class="ml-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md shadow-md hover:shadow-xl transition-all duration-300">
+                     Apply Now
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+            <div class="md:hidden flex items-center">
+                <button onclick="toggleMobileMenu()" class="text-gray-800 p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="fixed inset-0 z-[99999] md:hidden flex flex-col gap-4 pt-24 px-6 translate-x-full transition-transform duration-300 bg-white/90 backdrop-blur-xl">
+
+        <button onclick="toggleMobileMenu()"
+                class="absolute top-6 right-6 text-gray-700 text-3xl">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <a href="index.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Home</a>
+        <a href="services.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Services</a>
+        <a href="fees.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Pricing</a>
+        <a href="blog.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Blog</a>
+        <a href="faq.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">FAQ</a>
+        <a href="support.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Support</a>
+
+        <a href="apply.html"
+           target="_blank"
+            class="mt-6 bg-blue-600 text-white text-center py-3 rounded-xl font-semibold shadow hover:bg-blue-700 transition duration-300">
+           Apply Now
+      </a>
+
+    </div>
+
+</header>
+
+<section class="blog-hero">
+    <h1>WorkDen Blog</h1>
+    <p>Work from home, online tasks aur digital safety se related genuine guides.</p>
+</section>
+
+<div class="blog-wrapper max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="blog-grid">
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">Guide</span>
+                <h3>Work From Home Data Entry Job – Beginner Guide</h3>
+                <p>Data entry job kya hoti hai, kaise kaam karein aur common mistakes kaise avoid karein – complete guide.</p>
+                <div class="card-footer">
+                    <a href="blogs/work-from-home.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">5 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">Fact Check</span>
+                <h3>Online Typing Job Real or Fake?</h3>
+                <p>Online typing job sach me genuine hai ya scam? Complete truth aur safe tips yahan padhein.</p>
+                <div class="card-footer">
+                    <a href="blogs/online-typing-job-real-or-fake.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">4 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">Alert</span>
+                <h3>Captcha Work Safe or Not?</h3>
+                <p>Captcha typing job safe hai ya risky? Is blog me complete reality check aur genuine advice milegi.</p>
+                <div class="card-footer">
+                    <a href="blogs/captcha-work-safe-or-not.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">6 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">Fact Check</span>
+                <h3>Form Filling Job Real or Fake?</h3>
+                <p>Form filling job sach me genuine hai ya scam? Complete reality check aur safe tips yahan padhein.</p>
+                <div class="card-footer">
+                    <a href="blogs/form-filling-job-real-or-fake.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">5 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">WorkDen Special</span>
+                <h3>Work From Home Opportunity on WorkDen</h3>
+                <p>WorkDen par work from home kaise milta hai? Process, rules aur genuine online work ka complete overview.</p>
+                <div class="card-footer">
+                    <a href="blogs/work-from-home-opportunity-workden.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">7 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">Beginners</span>
+                <h3>Work From Home Jobs for Beginners</h3>
+                <p>Beginners ke liye best work from home jobs kaise mile? Safe online work start karne ka complete guide.</p>
+                <div class="card-footer">
+                    <a href="blogs/work-from-home-jobs-for-beginners.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">5 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">Earning</span>
+                <h3>Ghar Baithe Online Paise Kaise Kamaye?</h3>
+                <p>Ghar baithe genuine online earning kaise start karein? Safe work from home options ka complete guide.</p>
+                <div class="card-footer">
+                    <a href="blogs/ghar-baithe-online-paise-kaise-kamaye.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">8 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">Platforms</span>
+                <h3>Online Earning Platforms in India</h3>
+                <p>Online earning platforms ke types aur kyun WorkDen ek reliable earning platform mana jaata hai.</p>
+                <div class="card-footer">
+                    <a href="blogs/online-earning-platforms-in-india.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">6 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">Education</span>
+                <h3>How WorkDen Helps Beginners Online Work</h3>
+                <p>Beginners ke liye WorkDen kaise safe aur structured online work environment provide karta hai.</p>
+                <div class="card-footer">
+                    <a href="blogs/how-workden-helps-beginners-online-work.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">4 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">Part Time</span>
+                <h3>Part Time Job Work From Home</h3>
+                <p>Part time online job kaise mile? Safe options aur WorkDen jaise platforms beginners ke liye kyun useful ho sakte hain.</p>
+                <div class="card-footer">
+                    <a href="blogs/part-time-job-work-from-home.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">5 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">Students</span>
+                <h3>Work From Home for Students</h3>
+                <p>Students ke liye safe part time online work aur WorkDen par available opportunities ka complete guide.</p>
+                <div class="card-footer">
+                    <a href="blogs/work-from-home-for-students.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">4 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">Housewives</span>
+                <h3>Work From Home for Housewives</h3>
+                <p>Housewives ke liye safe online work options, flexible timings aur WorkDen ka special overview.</p>
+                <div class="card-footer">
+                    <a href="blogs/work-from-home-for-housewives.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">5 min read</span>
+                </div>
+            </div>
+        </article>
+        <article class="blog-card">
+            <div class="card-content">
+                <span class="category-badge">WFH</span>
+                <h3>Work From Home: Data Entry Job</h3>
+                <p>Complete Beginner Guide – Real vs Fake, Safe Process aur Sahi Platform Chunein.</p>
+                <div class="card-footer">
+                    <a href="blogs/work-from-home.html" class="read-more">Read Full Blog</a>
+                    <span class="read-time">6 min read</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<script>
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('translate-x-full');
+        menu.classList.toggle('translate-x-0');
+    }
+</script>
+
+
+<footer class="relative bg-gradient-to-b from-white to-blue-50 border-t border-blue-100 overflow-hidden">
+
+    <!-- Soft Glow -->
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-[350px] h-[180px] bg-blue-100 blur-3xl opacity-20"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-14 pb-8">
+
+        <!-- MAIN GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Brand -->
+            <div>
+                <h2 class="text-xl font-semibold text-gray-900 tracking-tight mb-4">
+                    WorkDen
+                </h2>
+
+                <p class="text-sm text-gray-600 leading-relaxed mb-5">
+                    A verified digital task platform delivering structured online work 
+                    opportunities with transparency, secure workflow, and compliance standards.
+                </p>
+
+               <div class="flex gap-3 text-base">
+
+                <!-- Facebook -->
+                   <a href="https://www.facebook.com/people/Workden-India/61583820256534/"
+                      target="_blank" rel="noopener noreferrer"
+                      class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition">
+                     <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                <!-- Instagram -->
+                   <a href="https://www.instagram.com/workden_wfh"
+                       target="_blank" rel="noopener noreferrer"
+                        class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+               <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/in/workden-india-315391383/"
+                     target="_blank" rel="noopener noreferrer"
+                     class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition">
+                     <i class="fab fa-linkedin-in"></i>
+                 </a>
+
+            </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Quick Links
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+                    <li><a href="fees.html" class="hover:text-blue-600 transition">Membership Details</a></li>
+                    <li><a href="apply.html" class="hover:text-blue-600 transition">Apply Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Legal
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-blue-600 transition">Terms & Conditions</a></li>
+                    <li><a href="disclaimer.html" class="hover:text-blue-600 transition">Disclaimer</a></li>
+                    <li><a href="refund.html" class="hover:text-blue-600 transition">Refund Policy</a></li>
+                </ul>
+
+                <div class="mt-5 p-3 bg-white/70 backdrop-blur-md rounded-xl border border-blue-100 text-xs text-gray-600">
+                    <p class="font-semibold text-gray-800 mb-1">Business Verification</p>
+                    <p>MSME (Udyam): UDYAM-KR-03-0640514</p>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Contact
+                </h3>
+
+                <ul class="space-y-4 text-sm text-gray-600">
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-envelope text-xs"></i>
+                        </div>
+                        <span>info@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-headset text-xs"></i>
+                        </div>
+                        <span>support@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Ashok Nagar, Bangalore – 560001</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Parsuram Pur, Motihari – 845416</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar (NOW OUTSIDE GRID) -->
+        <div class="mt-10 pt-5 border-t border-blue-100">
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p class="text-center md:text-left">
+                    © 2026 <span class="font-semibold text-gray-700">WorkDen</span>. All rights reserved.
+                </p>
+                <p class="mt-2 md:mt-0 text-gray-400 text-center md:text-right">
+                    Structured Digital Task Platform
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

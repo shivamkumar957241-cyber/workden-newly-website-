@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services – WorkDen | Professional Digital Task Solutions</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta name="description" content="Explore WorkDen's professional digital task services including data entry, content review, document formatting and structured online workflow solutions.">
+
+    <!-- Smooth Scroll -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Premium subtle scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f4c42',
+                        primaryDark: '#072e27',
+                        secondary: '#1e293b',
+                        accent: '#d4af37',
+                        bgLight: '#f8fafc',
+                        neutralLight: '#f9fafb'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="flex flex-col min-h-screen overflow-x-hidden">
+
+<header class="fixed w-full top-0 z-50 
+bg-white/25 backdrop-blur-2xl 
+border-b border-white/40 
+shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
+transition-all duration-500">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center gap-3">
+                    
+                    <img src="workden-logo.png" 
+                         alt="WorkDen Logo" 
+                         class="h-10 w-auto object-contain">
+
+                    <span class="font-bold text-xl text-gray-900 tracking-tight">
+                        WorkDen
+                    </span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+
+                <a href="index.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                   Home
+                   <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+
+                <a href="services.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Services
+                     <span class="absolute left-0 -bottom-1 w-full h-[2px] bg-blue-600"></span>
+                </a>
+
+                <!-- PRICING UPDATED -->
+                <a href="fees.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Pricing
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="blog.html"
+                    class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Blog
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+               </a>
+
+                <a href="faq.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    FAQ
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="support.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Support
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <!-- Apply Button -->
+                <a href="apply.html"
+                     class="ml-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md shadow-md hover:shadow-xl transition-all duration-300">
+                     Apply Now
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+            <div class="md:hidden flex items-center">
+                <button onclick="toggleMobileMenu()" class="text-gray-800 p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="fixed inset-0 z-[99999] md:hidden flex flex-col gap-4 pt-24 px-6 translate-x-full transition-transform duration-300 bg-white/90 backdrop-blur-xl">
+
+        <button onclick="toggleMobileMenu()"
+                class="absolute top-6 right-6 text-gray-700 text-3xl">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <a href="index.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Home</a>
+        <a href="services.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Services</a>
+        <a href="fees.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Pricing</a>
+        <a href="blog.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Blog</a>
+        <a href="faq.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">FAQ</a>
+        <a href="support.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Support</a>
+
+        <a href="apply.html"
+           target="_blank"
+            class="mt-6 bg-blue-600 text-white text-center py-3 rounded-xl font-semibold shadow hover:bg-blue-700 transition duration-300">
+           Apply Now
+      </a>
+
+    </div>
+
+</header>
+
+<main class="flex-grow pt-24 bg-gradient-to-b from-white via-gray-50 to-white">
+
+    <!-- HERO -->
+    <section class="text-center pb-16 border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-semibold text-gray-900 mb-4 tracking-tight">
+                Our Services
+            </h1>
+
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Professional task-based solutions designed for accuracy and scalability.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="max-w-7xl mx-auto px-6 py-20">
+
+        <!-- NOTICE -->
+        <div class="relative mb-16 rounded-2xl overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-yellow-100 via-yellow-50 to-yellow-100"></div>
+            <div class="relative p-6 border border-yellow-200 rounded-2xl">
+                <p class="text-sm text-yellow-800 font-medium flex items-center justify-center gap-2">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Note: Service availability may vary based on project requirements and user eligibility.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- SERVICES GRID -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <!-- CARD -->
+            <div class="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-t-2xl"></div>
+
+                <div class="w-16 h-16 mb-6 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl transition duration-500 group-hover:bg-blue-600 group-hover:text-white shadow-md">
+                    <i class="fas fa-keyboard"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Data Entry
+                </h3>
+
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    High-accuracy data digitization and entry tasks requiring attention to detail.
+                </p>
+            </div>
+
+
+
+            <div class="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-t-2xl"></div>
+
+                <div class="w-16 h-16 mb-6 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl transition duration-500 group-hover:bg-blue-600 group-hover:text-white shadow-md">
+                    <i class="fas fa-file-signature"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Form Filling
+                </h3>
+
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Structured form processing and verification for various project needs.
+                </p>
+            </div>
+
+
+
+            <div class="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-t-2xl"></div>
+
+                <div class="w-16 h-16 mb-6 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl transition duration-500 group-hover:bg-blue-600 group-hover:text-white shadow-md">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Document Formatting
+                </h3>
+
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Conversion of PDF documents to editable Word formats with strict formatting rules.
+                </p>
+            </div>
+
+
+
+            <div class="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-t-2xl"></div>
+
+                <div class="w-16 h-16 mb-6 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl transition duration-500 group-hover:bg-blue-600 group-hover:text-white shadow-md">
+                    <i class="fas fa-spell-check"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Content Review
+                </h3>
+
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Grammar correction and content quality analysis tasks.
+                </p>
+            </div>
+
+
+
+            <div class="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-t-2xl"></div>
+
+                <div class="w-16 h-16 mb-6 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl transition duration-500 group-hover:bg-blue-600 group-hover:text-white shadow-md">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Email-Based Tasks
+                </h3>
+
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Sorting, categorizing, and managing email communication data.
+                </p>
+            </div>
+
+
+
+            <div class="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-t-2xl"></div>
+
+                <div class="w-16 h-16 mb-6 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl transition duration-500 group-hover:bg-blue-600 group-hover:text-white shadow-md">
+                    <i class="fas fa-headset"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Chat Support
+                </h3>
+
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Chat-based support and query resolution tasks.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="relative bg-gradient-to-b from-white to-blue-50 border-t border-blue-100 overflow-hidden">
+
+    <!-- Soft Glow -->
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-[350px] h-[180px] bg-blue-100 blur-3xl opacity-20"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-14 pb-8">
+
+        <!-- MAIN GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Brand -->
+            <div>
+                <h2 class="text-xl font-semibold text-gray-900 tracking-tight mb-4">
+                    WorkDen
+                </h2>
+
+                <p class="text-sm text-gray-600 leading-relaxed mb-5">
+                    A verified digital task platform delivering structured online work 
+                    opportunities with transparency, secure workflow, and compliance standards.
+                </p>
+
+               <div class="flex gap-3 text-base">
+
+                <!-- Facebook -->
+                   <a href="https://www.facebook.com/people/Workden-India/61583820256534/"
+                      target="_blank" rel="noopener noreferrer"
+                      class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition">
+                     <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                <!-- Instagram -->
+                   <a href="https://www.instagram.com/workden_wfh"
+                       target="_blank" rel="noopener noreferrer"
+                        class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+               <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/in/workden-india-315391383/"
+                     target="_blank" rel="noopener noreferrer"
+                     class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition">
+                     <i class="fab fa-linkedin-in"></i>
+                 </a>
+
+            </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Quick Links
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+                    <li><a href="fees.html" class="hover:text-blue-600 transition">Membership Details</a></li>
+                    <li><a href="apply.html" class="hover:text-blue-600 transition">Apply Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Legal
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-blue-600 transition">Terms & Conditions</a></li>
+                    <li><a href="disclaimer.html" class="hover:text-blue-600 transition">Disclaimer</a></li>
+                    <li><a href="refund.html" class="hover:text-blue-600 transition">Refund Policy</a></li>
+                </ul>
+
+                <div class="mt-5 p-3 bg-white/70 backdrop-blur-md rounded-xl border border-blue-100 text-xs text-gray-600">
+                    <p class="font-semibold text-gray-800 mb-1">Business Verification</p>
+                    <p>MSME (Udyam): UDYAM-KR-03-0640514</p>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Contact
+                </h3>
+
+                <ul class="space-y-4 text-sm text-gray-600">
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-envelope text-xs"></i>
+                        </div>
+                        <span>info@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-headset text-xs"></i>
+                        </div>
+                        <span>support@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Ashok Nagar, Bangalore – 560001</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Parsuram Pur, Motihari – 845416</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar (NOW OUTSIDE GRID) -->
+        <div class="mt-10 pt-5 border-t border-blue-100">
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p class="text-center md:text-left">
+                    © 2026 <span class="font-semibold text-gray-700">WorkDen</span>. All rights reserved.
+                </p>
+                <p class="mt-2 md:mt-0 text-gray-400 text-center md:text-right">
+                    Structured Digital Task Platform
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+   <!-- Tidio Live Chat -->
+  <script src="//code.tidio.co/cnjmhfu6axyap6lkz6v0dayvl8qeienl.js" async></script>
+
+
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('translate-x-full');
+}
+</script>
+<script src="script.js"></script>
+</body>
+</html>

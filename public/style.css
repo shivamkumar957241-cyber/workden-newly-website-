@@ -1,0 +1,65 @@
+/* GLOBAL SETTINGS */
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden; /* Horizontal scroll rokne ke liye */
+    background-color: #f8fafc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CUSTOM SCROLLBAR - Modern Grey (Professional Look) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #94a3b8; /* Slate Grey instead of Dark Green */
+    border-radius: 6px;
+    border: 2px solid #f1f1f1; /* Padding effect */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* ANIMATIONS FIX - Content ab turant dikhega */
+/* Maine opacity: 0 hata diya hai taaki wait na karna pade */
+.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    transition: none !important;
+}
+
+/* VIP CARD STYLING - Modern & Clean */
+.vip-card {
+    background: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth physics */
+    border: 1px solid #e2e8f0; /* Light grey border */
+}
+
+.vip-card:hover {
+    transform: translateY(-8px); /* Thoda sa upar uthega */
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-color: #2563eb; /* Hover pe Blue border (Professional) */
+}
+
+/* HEADER & MOBILE MENU UTILITIES */
+/* Agar mobile menu khule to scroll rokne ke liye */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* BUTTONS & LINKS */
+a, button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* TEXT SELECTION COLOR */
+::selection {
+    background: #2563eb;
+    color: white;
+}

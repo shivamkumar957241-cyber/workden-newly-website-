@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workden | Digital Experiences Crafted with Precision</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f3f0ef",
+                    "inverse-primary": "#c6c6c7",
+                    "surface-tint": "#5d5f5f",
+                    "on-secondary-fixed-variant": "#454748",
+                    "outline-variant": "#c4c7c8",
+                    "on-tertiary-container": "#747676",
+                    "inverse-surface": "#313030",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#1a1c1c",
+                    "primary-fixed-dim": "#c6c6c7",
+                    "surface": "#fcf9f8",
+                    "background": "#fcf9f8",
+                    "secondary-fixed": "#e1e3e4",
+                    "tertiary-container": "#ffffff",
+                    "on-background": "#1c1b1b",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-surface-variant": "#444748",
+                    "secondary-fixed-dim": "#c5c7c8",
+                    "on-primary-fixed-variant": "#454747",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#ffffff",
+                    "on-secondary-fixed": "#191c1d",
+                    "outline": "#747878",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#747676",
+                    "on-surface": "#1c1b1b",
+                    "tertiary": "#5d5f5f",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary": "#5c5f60",
+                    "surface-container": "#f0eded",
+                    "on-secondary-container": "#626566",
+                    "surface-container-high": "#eae7e7",
+                    "surface-bright": "#fcf9f8",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container-low": "#f6f3f2",
+                    "primary-fixed": "#e2e2e2",
+                    "surface-dim": "#dcd9d9",
+                    "secondary-container": "#e1e3e4",
+                    "on-primary": "#ffffff",
+                    "primary": "#5d5f5f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 70% 30%, rgba(225, 227, 228, 0.4) 0%, rgba(252, 249, 248, 1) 70%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface docked full-width top-0 border-b border-outline-variant z-50 sticky">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="text-headline-lg font-headline-lg tracking-tighter text-on-surface">Workden</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Process</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">About</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all active:scale-95">
+                Start a Project
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center pt-20 hero-gradient overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 z-10">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 leading-tight">
+                        Digital Experiences <br/>Crafted with Precision
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        We build high-performance web solutions for visionary brands. Modern design meets architectural engineering in every pixel we place.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:shadow-lg transition-all">
+                            View Our Work
+                        </button>
+<button class="border border-primary text-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container transition-all">
+                            Get in Touch
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative mt-12 lg:mt-0">
+<div class="relative w-full aspect-square bg-surface-container rounded-full overflow-hidden border border-outline-variant shadow-sm p-8">
+<img class="w-full h-full object-cover rounded-full grayscale" data-alt="A highly sophisticated abstract 3D architectural composition featuring interlocking porcelain-white geometric slabs and translucent glass prisms. The scene is bathed in soft, high-key studio lighting that emphasizes subtle shadows and clean edges, perfectly reflecting a minimalist corporate agency aesthetic. The mood is serene, professional, and meticulously organized against a warm-white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYTrhwEZB9dCxItTIQK_Yd5mfBQTaNXnSfFofp8Z5eD2kX6dH0517QqSYh1tXYCn8-cOA6h9zS5qn7cUk9APqwXy1lJXLmc3m3f-1Jw9TMZ-evMI7OogbF-ifvCyAMxanpwRekgWPE7K0LxHcP3pACoFPOQR_hxBy0eXQwwn3uge1ytapr0UHMoTs25FIieTanru41PjLk3oixFudRm-x-kpchj1q31KoQ0GI2N55Mq947Jwt2kT3cSofga2wd_7arnB0y23nCKWQ"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 border border-outline-variant rounded-full opacity-30"></div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-section-gap">
+<div>
+<span class="text-primary font-label-md text-label-md tracking-[0.2em] uppercase mb-4 block">Expertise</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Our Expertise</h2>
+</div>
+<p class="max-w-md text-on-surface-variant mt-4 md:mt-0">
+                        Bridging the gap between aesthetic beauty and technical performance through rigorous design principles.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="group p-10 bg-surface-container-lowest border border-outline-variant rounded-lg hover:border-primary transition-all duration-300">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-on-secondary-container group-hover:text-on-primary" data-icon="terminal">terminal</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile mb-4">Web Development</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+                            Robust, scalable architectures built with modern frameworks to ensure longevity and seamless performance.
+                        </p>
+</div>
+<!-- Card 2 -->
+<div class="group p-10 bg-surface-container-lowest border border-outline-variant rounded-lg hover:border-primary transition-all duration-300">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-on-secondary-container group-hover:text-on-primary" data-icon="layers">layers</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile mb-4">UI/UX Design</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+                            User-centric interfaces that combine minimalist elegance with intuitive usability for deeper brand engagement.
+                        </p>
+</div>
+<!-- Card 3 -->
+<div class="group p-10 bg-surface-container-lowest border border-outline-variant rounded-lg hover:border-primary transition-all duration-300">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-on-secondary-container group-hover:text-on-primary" data-icon="speed">speed</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile mb-4">Performance</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+                            Advanced optimization techniques to achieve near-instant load times and flawless accessibility scores.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Bento Section -->
+<section class="py-section-gap bg-background">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[280px]">
+<div class="md:col-span-8 bg-surface-container-low border border-outline-variant rounded-xl p-10 flex flex-col justify-end overflow-hidden relative">
+<div class="z-10">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Architectural Precision</h2>
+<p class="text-on-surface-variant max-w-md">Our process follows a rigorous blueprinting phase before a single line of code is written.</p>
+</div>
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-[160px]" data-icon="architecture">architecture</span>
+</div>
+</div>
+<div class="md:col-span-4 bg-primary p-10 rounded-xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-on-primary text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<div class="text-on-primary">
+<p class="font-label-md text-label-md uppercase tracking-widest mb-2">Visionary</p>
+<h3 class="font-headline-lg text-headline-lg-mobile">Uncompromising Quality</h3>
+</div>
+</div>
+<div class="md:col-span-4 border border-outline-variant rounded-xl p-8 flex items-center justify-center group overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A bright, minimalist office studio featuring an expansive white oak workstation, high-end ergonomic design, and a single large monitor displaying clean code. The room is filled with soft natural light from floor-to-ceiling windows, highlighting a pristine, distraction-free environment. The aesthetic is purely professional, architectural, and airy, emphasizing the agency's commitment to clarity and focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq_EvWv6EV65QU7MsghEIUcyKJbU4T9UucEvmWhcM8OMTI_Lp1E9buEvw3G_fT34zy5p042VU_03U5an3DqaOql9aP1lBsNIKYZm2XT3NfZZJ4Q84sPICEFdvcoZVT_kPAu3N7j_giaWiqfz9OIbm2v56cusiCZd77QGMRcFlvLbXFOBJu-RYkUYJQGBJYoAr4yrrpg3stZ8ahE7jJ2Cu40Kv5LR-v9wMzDkB2M3lpcEw6XKfk-OLXFWM-3er_ZJGZTB2Aq1e93Pg"/>
+</div>
+<div class="md:col-span-8 bg-surface-container border border-outline-variant rounded-xl p-10 flex items-center justify-between">
+<div class="max-w-md">
+<h3 class="font-headline-lg text-headline-lg mb-4">Strategic Execution</h3>
+<p class="text-on-surface-variant">We align technical requirements with business objectives to deliver results that matter.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-6xl hidden sm:block" data-icon="monitoring">monitoring</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap relative overflow-hidden bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center relative z-10">
+<h2 class="font-display-lg text-display-lg-mobile md:text-[48px] text-on-surface mb-8 tracking-tight">
+                    Ready to build something <br/>extraordinary?
+                </h2>
+<div class="flex flex-col items-center gap-8">
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl mx-auto">
+                        Whether you're starting from scratch or refining an existing product, our team of engineers and designers is ready to help you scale.
+                    </p>
+<button class="bg-primary text-on-primary px-12 py-5 rounded-lg font-label-md text-label-md hover:shadow-xl transition-all active:scale-95">
+                        Book a Consultation
+                    </button>
+</div>
+</div>
+<!-- Background detail -->
+<div class="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
+<span class="text-[50vw] font-bold tracking-tighter">WORKDEN</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto w-full">
+<div class="flex flex-col justify-between">
+<div>
+<div class="text-headline-lg-mobile font-headline-lg-mobile font-bold text-on-surface mb-6">Workden</div>
+<p class="text-on-surface-variant max-w-xs font-body-md text-body-md">
+                        A modern web agency committed to architectural precision and digital excellence.
+                    </p>
+</div>
+<div class="text-label-md font-label-md text-on-surface-variant mt-12">
+                    © 2024 Workden Agency. Built with architectural precision.
+                </div>
+</div>
+<div class="grid grid-cols-2 gap-gutter md:justify-items-end">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-widest">Platform</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Process</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-widest">Legal &amp; Social</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Instagram</a>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple intersection observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkDen – Professional Digital Task Platform | Work From Home Opportunities</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta name="description" content="WorkDen is a professional digital task platform in India offering structured work from home task opportunities with transparent workflows and accuracy-based evaluation.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f4c42',
+                        primaryDark: '#072e27',
+                        secondary: '#1e293b',
+                        accent: '#d4af37',
+                        bgLight: '#f8fafc',
+                        textDark: '#334155',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'shine': 'shine 3s infinite linear',
+                    },
+                    keyframes: {
+                        shine: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(100%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S6VHRG79FR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S6VHRG79FR');
+</script>
+
+</head>
+
+<body class="flex flex-col min-h-screen overflow-x-hidden">
+
+<header class="fixed w-full top-0 z-50 
+bg-white/25 backdrop-blur-2xl 
+border-b border-white/40 
+shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
+transition-all duration-500">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center gap-3">
+                    
+                    <img src="workden-logo.png" 
+                         alt="WorkDen Logo" 
+                         class="h-10 w-auto object-contain">
+
+                    <span class="font-bold text-xl text-gray-900 tracking-tight">
+                        WorkDen
+                    </span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+
+                <a href="index.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                   Home
+                    <span class="absolute left-0 -bottom-1 w-full h-[2px] bg-blue-600"></span>
+                </a>
+
+
+                <a href="services.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Services
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <!-- PRICING UPDATED -->
+                <a href="fees.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Pricing
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="blog.html"
+                    class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Blog
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+               </a>
+
+                <a href="faq.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    FAQ
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="support.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Support
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <!-- Apply Button -->
+                <a href="apply.html"
+                     class="ml-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md shadow-md hover:shadow-xl transition-all duration-300">
+                     Apply Now
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+            <div class="md:hidden flex items-center">
+                <button onclick="toggleMobileMenu()" class="text-gray-800 p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="fixed inset-0 z-[99999] md:hidden flex flex-col gap-4 pt-24 px-6 translate-x-full transition-transform duration-300 bg-white/90 backdrop-blur-xl">
+
+        <button onclick="toggleMobileMenu()"
+                class="absolute top-6 right-6 text-gray-700 text-3xl">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <a href="index.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Home</a>
+        <a href="services.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Services</a>
+        <a href="fees.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Pricing</a>
+        <a href="blog.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Blog</a>
+        <a href="faq.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">FAQ</a>
+        <a href="support.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Support</a>
+
+        <a href="apply.html"
+           target="_blank"
+            class="mt-6 bg-blue-600 text-white text-center py-3 rounded-xl font-semibold shadow hover:bg-blue-700 transition duration-300">
+           Apply Now
+      </a>
+
+    </div>
+
+</header>
+ 
+
+<main class="flex-grow pt-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-[#2b59c3] text-[#e0e7ff] pt-20 pb-32 overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+
+                <!-- LEFT -->
+                <div class="lg:w-1/2 text-left">
+
+                    <span class="inline-flex items-center py-2 px-4 rounded-full bg-white/10 border border-white/20 text-white text-[12px] md:text-[13px] font-semibold mb-8 uppercase tracking-widest shadow-sm">
+                        <i class="fas fa-shield-alt mr-2.5 text-[11px]"></i> Enterprise-Grade Security
+                    </span>
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-[1.1] tracking-tight text-[#f8fafc]">
+                        Professional Digital <br class="hidden md:block"> Task Platform
+                    </h1>
+
+                    <p class="text-[#d1d5db] mb-8 text-base md:text-lg max-w-lg leading-relaxed opacity-90">
+                        A professional work from home task platform designed for accuracy, transparency, and secure remote work in India.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3">
+                        <a href="apply.html"
+                           class="bg-[#f8fafc] text-[#2b59c3] px-7 py-3 rounded-md font-bold shadow-md hover:bg-white transition-all duration-300 flex items-center gap-2 text-sm transform hover:-translate-y-1">
+                           <i class="fas fa-briefcase text-xs"></i> Apply Now
+                       </a>
+
+                      
+
+                        <a href="#how-it-works"
+                            class="bg-white/10 border border-white/20 hover:bg-white/20 text-[#f1f5f9] px-7 py-3 rounded-md font-semibold transition-all duration-300 flex items-center gap-2 text-sm">
+                            How It Works <i class="fas fa-arrow-right text-[10px]"></i>
+                      </a>
+                   </div>
+
+
+                </div>
+
+                <!-- RIGHT IMAGE -->
+<div class="lg:w-[45%] relative mt-10 lg:mt-0 flex justify-center lg:justify-end">
+
+  <div class="overflow-hidden rounded-lg shadow-2xl w-full max-w-md lg:max-w-xl">
+      <img src="hero-image.png"
+      alt="WorkDen Platform"
+      class="w-full h-[200px] sm:h-[240px] lg:h-[290px] object-cover brightness-95">
+  </div>
+
+</div>
+
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- PREMIUM OVERLAP CARDS -->
+    <section class="relative -mt-20 pb-20 z-20">
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- CARD 1 -->
+                <div class="group relative bg-white/90 backdrop-blur-xl 
+                            border border-blue-100 
+                            rounded-2xl p-8 
+                            shadow-xl 
+                            hover:shadow-2xl
+                            transition-all duration-500 hover:-translate-y-2">
+
+                    <div class="absolute top-0 left-0 w-full h-[3px] 
+                                bg-gradient-to-r from-blue-500 to-indigo-500 
+                                rounded-t-2xl"></div>
+
+                    <div class="flex items-start gap-5 mt-2">
+
+                        <div class="w-14 h-14 rounded-xl 
+                                    bg-gradient-to-br from-blue-100 to-blue-50 
+                                    flex items-center justify-center 
+                                    text-blue-600 text-xl 
+                                    border border-blue-200 
+                                    group-hover:bg-blue-600 
+                                    group-hover:text-white
+                                    transition-all duration-300 shadow-sm">
+                            <i class="fas fa-lock"></i>
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold text-slate-800 text-lg mb-1">
+                                SSL Secured Platform
+                            </h3>
+                            <p class="text-sm text-slate-500">
+                                Secure data transmission & encrypted access.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <!-- CARD 2 -->
+                <div class="group relative bg-white/90 backdrop-blur-xl 
+                            border border-green-100 
+                            rounded-2xl p-8 
+                            shadow-xl 
+                            hover:shadow-2xl
+                            transition-all duration-500 hover:-translate-y-2">
+
+                    <div class="absolute top-0 left-0 w-full h-[3px] 
+                                bg-gradient-to-r from-green-500 to-emerald-500 
+                                rounded-t-2xl"></div>
+
+                    <div class="flex items-start gap-5 mt-2">
+
+                        <div class="w-14 h-14 rounded-xl 
+                                    bg-gradient-to-br from-green-100 to-green-50 
+                                    flex items-center justify-center 
+                                    text-green-600 text-xl 
+                                    border border-green-200 
+                                    group-hover:bg-green-600 
+                                    group-hover:text-white
+                                    transition-all duration-300 shadow-sm">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold text-slate-800 text-lg mb-1">
+                                Verified Task Workflow
+                            </h3>
+                            <p class="text-sm text-slate-500">
+                                Structured quality evaluation standards.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <!-- CARD 3 -->
+                <div class="group relative bg-white/90 backdrop-blur-xl 
+                            border border-indigo-100 
+                            rounded-2xl p-8 
+                            shadow-xl 
+                            hover:shadow-2xl
+                            transition-all duration-500 hover:-translate-y-2">
+
+                    <div class="absolute top-0 left-0 w-full h-[3px] 
+                                bg-gradient-to-r from-indigo-500 to-blue-500 
+                                rounded-t-2xl"></div>
+
+                    <div class="flex items-start gap-5 mt-2">
+
+                        <div class="w-14 h-14 rounded-xl 
+                                    bg-gradient-to-br from-indigo-100 to-indigo-50 
+                                    flex items-center justify-center 
+                                    text-indigo-600 text-xl 
+                                    border border-indigo-200 
+                                    group-hover:bg-indigo-600 
+                                    group-hover:text-white
+                                    transition-all duration-300 shadow-sm">
+                            <i class="fas fa-server"></i>
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold text-slate-800 text-lg mb-1">
+                                Platform Status: Active
+                            </h3>
+                            <p class="text-sm text-slate-500">
+                                System Version: v2.4.0 (Stable)
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+       <!-- COMMUNITY + TESTIMONIALS -->
+<section class="py-24 bg-gradient-to-b from-blue-50 via-white to-white relative overflow-hidden">
+
+    <!-- Background Glow -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-40"></div>
+    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-40"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- STATS -->
+        <div class="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto mb-20">
+
+            <div class="group bg-white/80 backdrop-blur-xl border border-blue-100 p-10 rounded-3xl text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+                <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl group-hover:bg-blue-600 group-hover:text-white transition duration-300">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="text-4xl font-bold text-gray-900">5,000+</h3>
+                <p class="text-gray-500 mt-2 font-medium">Active Members</p>
+            </div>
+
+            <div class="group bg-white/80 backdrop-blur-xl border border-indigo-100 p-10 rounded-3xl text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-500">
+                <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl group-hover:bg-indigo-600 group-hover:text-white transition duration-300">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900">Success Stories</h3>
+                <p class="text-gray-500 mt-2 font-medium">Real user feedback</p>
+            </div>
+
+        </div>
+
+        <!-- TESTIMONIALS -->
+        <div class="grid md:grid-cols-3 gap-10">
+
+            <div class="bg-white/80 backdrop-blur-xl border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition duration-500">
+                <i class="fas fa-quote-left text-blue-500 text-3xl mb-5"></i>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                    WorkDen has completely changed my financial situation. I earn consistently and support is responsive.
+                </p>
+                <span class="font-semibold text-gray-900">– Priya Sharma, Delhi</span>
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-xl border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition duration-500">
+                <i class="fas fa-quote-left text-blue-500 text-3xl mb-5"></i>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                    As a student, this platform helped me earn extra income without affecting studies.
+                </p>
+                <span class="font-semibold text-gray-900">– Rohit Kumar, Mumbai</span>
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-xl border border-gray-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition duration-500">
+                <i class="fas fa-quote-left text-blue-500 text-3xl mb-5"></i>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                    Flexible work options and clear guidelines. Genuine platform experience.
+                </p>
+                <span class="font-semibold text-gray-900">– Anjali Patel, Bangalore</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" 
+class="py-28 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden scroll-mt-24">
+
+
+    <!-- Background Glow -->
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-100 rounded-full blur-3xl opacity-30"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6">
+
+        <!-- Heading -->
+        <div class="text-center mb-24">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+                How It Works
+            </h2>
+            <p class="text-gray-500 max-w-2xl mx-auto">
+                A simple and structured onboarding process designed for transparency and efficiency.
+            </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative">
+
+            <!-- Horizontal Line -->
+            <div class="hidden md:block absolute top-10 left-0 w-full h-1 bg-gradient-to-r from-blue-200 via-indigo-200 to-green-200"></div>
+
+            <div class="grid md:grid-cols-4 gap-16 relative">
+
+                <!-- STEP 1 -->
+                <div class="text-center group">
+                    <div class="relative z-10 w-20 h-20 mx-auto rounded-full bg-white border-4 border-blue-600 text-blue-600 flex items-center justify-center text-2xl font-bold shadow-xl group-hover:bg-blue-600 group-hover:text-white transition duration-300">
+                        1
+                    </div>
+                    <h3 class="mt-8 text-xl font-semibold text-gray-900">
+                        Apply on WorkDen
+                    </h3>
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Submit your application through the official platform.
+                    </p>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="text-center group">
+                    <div class="relative z-10 w-20 h-20 mx-auto rounded-full bg-white border-4 border-indigo-600 text-indigo-600 flex items-center justify-center text-2xl font-bold shadow-xl group-hover:bg-indigo-600 group-hover:text-white transition duration-300">
+                        2
+                    </div>
+                    <h3 class="mt-8 text-xl font-semibold text-gray-900">
+                        Review & Approval
+                    </h3>
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Applications are reviewed based on verification and criteria.
+                    </p>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="text-center group">
+                    <div class="relative z-10 w-20 h-20 mx-auto rounded-full bg-white border-4 border-blue-600 text-blue-600 flex items-center justify-center text-2xl font-bold shadow-xl group-hover:bg-blue-600 group-hover:text-white transition duration-300">
+                        3
+                    </div>
+                    <h3 class="mt-8 text-xl font-semibold text-gray-900">
+                        Access Dashboard
+                    </h3>
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Approved users receive secure login credentials.
+                    </p>
+                </div>
+
+                <!-- STEP 4 -->
+                <div class="text-center group">
+                    <div class="relative z-10 w-20 h-20 mx-auto rounded-full bg-white border-4 border-green-600 text-green-600 flex items-center justify-center text-2xl font-bold shadow-xl group-hover:bg-green-600 group-hover:text-white transition duration-300">
+                        4
+                    </div>
+                    <h3 class="mt-8 text-xl font-semibold text-gray-900">
+                        Task & Quality Check
+                    </h3>
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Tasks are evaluated for accuracy and compliance.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Task Preview -->
+<div class="relative bg-gradient-to-b from-blue-50 via-white to-blue-100 py-20 border-t border-blue-100 overflow-hidden">
+
+    <!-- Soft Background Glow -->
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-blue-200 opacity-20 blur-3xl rounded-full"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <h2 class="text-3xl font-heading font-bold text-gray-900 mb-2 tracking-tight">
+                    Available Work Types
+                </h2>
+                <p class="text-gray-600">
+                    Diverse digital tasks tailored to accuracy and efficiency.
+                </p>
+            </div>
+
+            <!-- Desktop Button -->
+            <a href="services.html"
+                class="hidden md:inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition mt-4 md:mt-0">
+                View All Services
+                <i class="fas fa-arrow-right text-sm transition-transform duration-300 hover:translate-x-1"></i>
+            </a>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Card 1 -->
+            <div class="group bg-white/80 backdrop-blur-xl p-6 rounded-2xl border border-blue-100 shadow-md 
+                        hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 
+                        hover:border-blue-300 relative overflow-hidden">
+
+                <div class="absolute -top-6 -right-6 w-24 h-24 bg-blue-200 opacity-20 blur-2xl rounded-full group-hover:scale-110 transition duration-500"></div>
+
+                <i class="fas fa-database text-blue-600 text-2xl mb-3 transition duration-300 group-hover:scale-110"></i>
+                <span class="font-semibold text-gray-800 text-lg block">Data Entry</span>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group bg-white/80 backdrop-blur-xl p-6 rounded-2xl border border-blue-100 shadow-md 
+                        hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 
+                        hover:border-blue-300 relative overflow-hidden">
+
+                <div class="absolute -top-6 -right-6 w-24 h-24 bg-blue-200 opacity-20 blur-2xl rounded-full group-hover:scale-110 transition duration-500"></div>
+
+                <i class="fas fa-file-alt text-blue-600 text-2xl mb-3 transition duration-300 group-hover:scale-110"></i>
+                <span class="font-semibold text-gray-800 text-lg block">Form Filling</span>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group bg-white/80 backdrop-blur-xl p-6 rounded-2xl border border-blue-100 shadow-md 
+                        hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 
+                        hover:border-blue-300 relative overflow-hidden">
+
+                <div class="absolute -top-6 -right-6 w-24 h-24 bg-blue-200 opacity-20 blur-2xl rounded-full group-hover:scale-110 transition duration-500"></div>
+
+                <i class="fas fa-spell-check text-blue-600 text-2xl mb-3 transition duration-300 group-hover:scale-110"></i>
+                <span class="font-semibold text-gray-800 text-lg block">Content Review</span>
+            </div>
+
+            <!-- Card 4 (Updated) -->
+            <div class="group bg-white/80 backdrop-blur-xl p-6 rounded-2xl border border-blue-100 shadow-md 
+                        hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 
+                        hover:border-blue-300 relative overflow-hidden">
+
+                <div class="absolute -top-6 -right-6 w-24 h-24 bg-blue-200 opacity-20 blur-2xl rounded-full group-hover:scale-110 transition duration-500"></div>
+
+                <i class="fas fa-headset text-blue-600 text-2xl mb-3 transition duration-300 group-hover:scale-110"></i>
+                <span class="font-semibold text-gray-800 text-lg block">Chat Support</span>
+            </div>
+
+        </div>
+
+        <!-- Mobile Button -->
+        <a href="services.html"
+            class="md:hidden w-full mt-8 inline-block text-center bg-white/80 backdrop-blur-lg border border-blue-200 text-blue-700 font-semibold py-3 rounded-xl shadow-md hover:shadow-lg hover:bg-blue-50 transition-all duration-300">
+            View All Services
+        </a>
+
+    </div>
+</div>
+
+
+
+
+<!-- TRUST SECTION -->
+<section class="relative py-24 bg-gradient-to-b from-white via-blue-50 to-blue-100 overflow-hidden">
+
+    <!-- Soft Glow Background -->
+    <div class="absolute -top-16 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-blue-200 opacity-20 blur-3xl rounded-full"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <h3 class="text-center text-gray-900 font-bold text-3xl sm:text-4xl mb-16 tracking-tight">
+            Trust & Transparency
+        </h3>
+
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+
+            <!-- Card 1 -->
+            <div class="group relative bg-white/70 backdrop-blur-xl p-8 sm:p-10 rounded-3xl 
+                        border border-blue-100 shadow-lg 
+                        hover:shadow-2xl hover:-translate-y-2 
+                        transition-all duration-500 overflow-hidden">
+
+                <!-- Glow Effect -->
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-200 opacity-20 blur-2xl rounded-full 
+                            group-hover:scale-110 transition duration-500"></div>
+
+                <div class="relative flex items-start gap-6">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl 
+                                flex items-center justify-center 
+                                shadow-sm group-hover:bg-blue-600 group-hover:text-white 
+                                transition duration-300">
+                        <i class="fas fa-info-circle text-xl"></i>
+                    </div>
+
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        <span class="font-semibold text-gray-900">Platform Notice:</span>
+                        WorkDen operates as a task facilitation platform and does not provide employment or fixed income.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group relative bg-white/70 backdrop-blur-xl p-8 sm:p-10 rounded-3xl 
+                        border border-green-100 shadow-lg 
+                        hover:shadow-2xl hover:-translate-y-2 
+                        transition-all duration-500 overflow-hidden">
+
+                <!-- Glow Effect -->
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-green-200 opacity-20 blur-2xl rounded-full 
+                            group-hover:scale-110 transition duration-500"></div>
+
+                <div class="relative flex items-start gap-6">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl 
+                                flex items-center justify-center 
+                                shadow-sm group-hover:bg-green-600 group-hover:text-white 
+                                transition duration-300">
+                        <i class="fas fa-check-circle text-xl"></i>
+                    </div>
+
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        <span class="font-semibold text-gray-900">Accuracy Policy:</span>
+                        Tasks are evaluated based on strict quality standards. No guaranteed income.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="relative bg-gradient-to-b from-white to-blue-50 border-t border-blue-100 overflow-hidden">
+
+    <!-- Soft Glow -->
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-[350px] h-[180px] bg-blue-100 blur-3xl opacity-20"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-14 pb-8">
+
+        <!-- MAIN GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Brand -->
+            <div>
+                <h2 class="text-xl font-semibold text-gray-900 tracking-tight mb-4">
+                    WorkDen
+                </h2>
+
+                <p class="text-sm text-gray-600 leading-relaxed mb-5">
+                    A verified digital task platform delivering structured online work 
+                    opportunities with transparency, secure workflow, and compliance standards.
+                </p>
+
+               <div class="flex gap-3 text-base">
+
+                <!-- Facebook -->
+                   <a href="https://www.facebook.com/people/Workden-India/61583820256534/"
+                      target="_blank" rel="noopener noreferrer"
+                      class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition">
+                     <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                <!-- Instagram -->
+                   <a href="https://www.instagram.com/workden_wfh"
+                       target="_blank" rel="noopener noreferrer"
+                        class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+               <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/in/workden-india-315391383/"
+                     target="_blank" rel="noopener noreferrer"
+                     class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition">
+                     <i class="fab fa-linkedin-in"></i>
+                 </a>
+
+            </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Quick Links
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+                    <li><a href="fees.html" class="hover:text-blue-600 transition">Membership Details</a></li>
+                    <li><a href="apply.html" class="hover:text-blue-600 transition">Apply Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Legal
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-blue-600 transition">Terms & Conditions</a></li>
+                    <li><a href="disclaimer.html" class="hover:text-blue-600 transition">Disclaimer</a></li>
+                    <li><a href="refund.html" class="hover:text-blue-600 transition">Refund Policy</a></li>
+                </ul>
+
+                <div class="mt-5 p-3 bg-white/70 backdrop-blur-md rounded-xl border border-blue-100 text-xs text-gray-600">
+                    <p class="font-semibold text-gray-800 mb-1">Business Verification</p>
+                    <p>MSME (Udyam): UDYAM-KR-03-0640514</p>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Contact
+                </h3>
+
+                <ul class="space-y-4 text-sm text-gray-600">
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-envelope text-xs"></i>
+                        </div>
+                        <span>info@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-headset text-xs"></i>
+                        </div>
+                        <span>support@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Ashok Nagar, Bangalore – 560001</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Parsuram Pur, Motihari – 845416</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar (NOW OUTSIDE GRID) -->
+        <div class="mt-10 pt-5 border-t border-blue-100">
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p class="text-center md:text-left">
+                    © 2026 <span class="font-semibold text-gray-700">WorkDen</span>. All rights reserved.
+                </p>
+                <p class="mt-2 md:mt-0 text-gray-400 text-center md:text-right">
+                    Structured Digital Task Platform
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Tidio Live Chat -->
+<script src="//code.tidio.co/cnjmhfu6axyap6lkz6v0dayvl8qeienl.js" async></script>
+
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById("mobile-menu");
+
+    menu.classList.toggle("translate-x-full");
+    menu.classList.toggle("translate-x-0");
+
+    // Lock body scroll when menu open
+    document.body.classList.toggle("overflow-hidden");
+}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center – WorkDen | Get in Touch</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta name="description" content="Contact WorkDen support for account assistance, task queries, verification help, and platform-related issues. Official support channels only.">
+
+    <!-- Premium Base Styling -->
+   <style>
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+
+        /* Force show content (no delayed reveal) */
+        .reveal { 
+            opacity: 1 !important; 
+            transform: none !important; 
+            visibility: visible !important; 
+        }
+
+        /* VIP Card Hover Effect */
+        .vip-card {
+            transition: all 0.35s ease;
+        }
+
+        .vip-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Gradient Text Option */
+        .text-gradient {
+            background: linear-gradient(to right, #1e293b, #0f4c42);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Premium Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+   <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f4c42',
+                        primaryDark: '#072e27',
+                        secondary: '#1e293b',
+                        accent: '#d4af37',
+                        bgLight: '#f8fafc',
+                        neutralLight: '#f9fafb'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-bgLight overflow-x-hidden">
+
+<header class="fixed w-full top-0 z-50 
+bg-white/25 backdrop-blur-2xl 
+border-b border-white/40 
+shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
+transition-all duration-500">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center gap-3">
+                    
+                    <img src="workden-logo.png" 
+                         alt="WorkDen Logo" 
+                         class="h-10 w-auto object-contain">
+
+                    <span class="font-bold text-xl text-gray-900 tracking-tight">
+                        WorkDen
+                    </span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+
+                <a href="index.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                   Home
+                  <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="services.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Services
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <!-- PRICING UPDATED -->
+                <a href="fees.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Pricing
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="blog.html"
+                    class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Blog
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+               </a>
+
+                <a href="faq.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    FAQ
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="support.html"
+                   class="relative text-blue-600 font-semibold">
+                   Support
+                   <span class="absolute left-0 -bottom-1 w-full h-[2px] bg-blue-600 rounded"></span>
+                </a>
+
+
+                <!-- Apply Button -->
+                 <a href="apply.html"
+                     class="ml-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md shadow-md hover:shadow-xl transition-all duration-300">
+                     Apply Now
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+            <div class="md:hidden flex items-center">
+                <button onclick="toggleMobileMenu()" class="text-gray-800 p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="fixed inset-0 z-[99999] md:hidden flex flex-col gap-4 pt-24 px-6 translate-x-full transition-transform duration-300 bg-white/90 backdrop-blur-xl">
+
+        <button onclick="toggleMobileMenu()"
+                class="absolute top-6 right-6 text-gray-700 text-3xl">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <a href="index.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Home</a>
+        <a href="services.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Services</a>
+        <a href="fees.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Pricing</a>
+        <a href="blog.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Blog</a>
+        <a href="faq.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">FAQ</a>
+        <a href="support.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Support</a>
+
+        <a href="apply.html"
+            target="_blank"
+           class="mt-6 bg-blue-600 text-white text-center py-3 rounded-xl font-semibold shadow hover:bg-blue-700 transition duration-300">
+           Apply Now
+       </a>
+
+    </div>
+
+</header>
+
+
+<main class="flex-grow pt-24 bg-white">
+
+    <!-- HERO -->
+    <section class="text-center pb-14 border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-3">
+                Support Center
+            </h1>
+            <p class="text-gray-600 text-lg">
+                Official channels for platform-related queries and assistance.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
+<!-- TOP INFO CARDS SECTION -->
+<div class="relative mb-20 sm:mb-28 py-12 sm:py-16 px-4 sm:px-8 rounded-3xl bg-gradient-to-br from-blue-50 via-white to-blue-100 border border-blue-100 shadow-sm">
+
+    <div class="grid md:grid-cols-3 gap-6 sm:gap-10 items-stretch">
+
+        <!-- EMAIL CARD -->
+        <div class="group h-full bg-white/80 backdrop-blur-xl border border-blue-100 rounded-3xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-500 flex items-center">
+
+            <div class="flex items-start gap-5 w-full">
+
+                <div class="w-14 h-14 flex-shrink-0 rounded-2xl flex items-center justify-center text-lg text-white bg-gradient-to-br from-blue-500 to-blue-600 shadow-md transition duration-500 group-hover:scale-110">
+                    <i class="fas fa-envelope"></i>
+                </div>
+
+                <div class="flex flex-col justify-center">
+                    <h4 class="font-semibold text-gray-900 text-lg">
+                        Official Email
+                    </h4>
+
+                    <p class="text-blue-600 font-medium text-sm mt-2 break-all">
+                        support@workden.online
+                    </p>
+
+                    <p class="text-xs text-gray-500 mt-3">
+                        Response Time: 24–48 business hours
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- WORKING HOURS CARD -->
+        <div class="group h-full bg-white/80 backdrop-blur-xl border border-blue-100 rounded-3xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-500 flex items-center">
+
+            <div class="flex items-start gap-5 w-full">
+
+                <div class="w-14 h-14 flex-shrink-0 rounded-2xl flex items-center justify-center text-lg text-white bg-gradient-to-br from-gray-600 to-gray-800 shadow-md transition duration-500 group-hover:scale-110">
+                    <i class="fas fa-clock"></i>
+                </div>
+
+                <div class="flex flex-col justify-center">
+                    <h4 class="font-semibold text-gray-900 text-lg">
+                        Working Hours
+                    </h4>
+
+                    <p class="text-gray-600 text-sm mt-2">
+                        Mon–Sat
+                    </p>
+
+                    <p class="text-gray-600 text-sm mt-1">
+                        10:00 AM – 7:00 PM IST
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- FRAUD NOTICE CARD -->
+        <div class="group h-full bg-white/80 backdrop-blur-xl border border-blue-100 rounded-3xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-500 flex items-center">
+
+            <div class="flex items-start gap-5 w-full">
+
+                <div class="w-14 h-14 flex-shrink-0 rounded-2xl flex items-center justify-center text-lg text-white bg-gradient-to-br from-red-500 to-red-600 shadow-md transition duration-500 group-hover:scale-110">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+
+                <div class="flex flex-col justify-center">
+                    <h4 class="font-semibold text-gray-900 text-lg">
+                        Fraud Notice
+                    </h4>
+
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        WorkDen communicates only through official channels. No personal WhatsApp payments. Pay only on official details provided by an authorized WorkDen telecaller or recruiter.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+       <!-- SUPPORT PROCESS -->
+<div class="relative mb-20 sm:mb-28 py-12 sm:py-20 px-4 sm:px-8 rounded-3xl bg-gradient-to-br from-blue-50 via-white to-blue-100 border border-blue-100 shadow-sm">
+
+    <h3 class="text-2xl font-semibold text-gray-900 mb-16 text-center tracking-tight">
+        How Support Works
+    </h3>
+
+    <div class="relative grid md:grid-cols-3 gap-6 sm:gap-12 text-center">
+
+        <!-- Connector Line (Desktop Only) -->
+        <div class="hidden md:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200"></div>
+
+
+        <!-- STEP 1 -->
+        <div class="group relative bg-white/70 backdrop-blur-xl border border-blue-100 rounded-3xl p-6 sm:p-10 shadow-md hover:shadow-xl hover:-translate-y-3 transition duration-500">
+
+            <div class="relative z-10">
+
+                <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center text-lg font-semibold text-blue-600 bg-blue-100 shadow-md transition duration-500 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110">
+                    1
+                </div>
+
+                <h4 class="font-semibold text-gray-900 mb-3 text-lg">
+                    Submit Query
+                </h4>
+
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Fill out the support form with accurate details.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STEP 2 -->
+        <div class="group relative bg-white/70 backdrop-blur-xl border border-blue-100 rounded-3xl p-6 sm:p-10 shadow-md hover:shadow-xl hover:-translate-y-3 transition duration-500">
+
+            <div class="relative z-10">
+
+                <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center text-lg font-semibold text-blue-600 bg-blue-100 shadow-md transition duration-500 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110">
+                    2
+                </div>
+
+                <h4 class="font-semibold text-gray-900 mb-3 text-lg">
+                    Ticket Review
+                </h4>
+
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Our team reviews your request within 24–48 hours.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STEP 3 -->
+        <div class="group relative bg-white/70 backdrop-blur-xl border border-blue-100 rounded-3xl p-6 sm:p-10 shadow-md hover:shadow-xl hover:-translate-y-3 transition duration-500">
+
+            <div class="relative z-10">
+
+                <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center text-lg font-semibold text-blue-600 bg-blue-100 shadow-md transition duration-500 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110">
+                    3
+                </div>
+
+                <h4 class="font-semibold text-gray-900 mb-3 text-lg">
+                    Resolution
+                </h4>
+
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    You receive a response via official email communication.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+ <!-- MAIN GRID WRAPPER -->
+<div class="grid lg:grid-cols-2 gap-6 sm:gap-10">
+
+    <!-- LEFT: SUPPORT FORM -->
+    <div class="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 border border-blue-100 rounded-3xl p-6 sm:p-10 shadow-md hover:shadow-xl transition duration-500">
+
+        <div class="absolute left-0 top-0 h-full w-1 bg-blue-600 rounded-l-3xl"></div>
+
+        <div class="pl-0 sm:pl-6">
+
+            <h3 class="text-2xl font-semibold text-gray-900 mb-8">
+                Send a Query
+            </h3>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+
+                <!-- Hidden Fields -->
+                <input type="hidden" name="access_key" value="3aa42970-62a2-44d3-a76d-e740381761a0">
+                <input type="hidden" name="subject" value="New Support Query - Workden Website">
+                <input type="hidden" name="from_name" value="Workden Support Form">
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-2">
+                            Full Name
+                        </label>
+                        <input type="text" name="name" required
+                            class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-2">
+                            Email Address
+                        </label>
+                        <input type="email" name="email" required
+                            class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                    </div>
+
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-600 mb-2">
+                        Subject / Category
+                    </label>
+                    <select name="category"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                        <option>Application Status</option>
+                        <option>Login Issue</option>
+                        <option>Payment Verification</option>
+                        <option>Task Query</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-600 mb-2">
+                        Message
+                    </label>
+                    <textarea name="message" rows="4" required
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition resize-none"></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white font-semibold py-3 rounded-xl hover:bg-blue-700 shadow-md hover:shadow-lg transition duration-300">
+                    Submit Query
+                </button>
+
+                <div class="pt-4 border-t border-blue-100 text-xs text-gray-500">
+                    All support requests are assigned a unique reference ID for tracking.
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <!-- RIGHT: CONTACT CHANNELS -->
+    <div class="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 border border-blue-100 rounded-3xl p-6 sm:p-10 shadow-md hover:shadow-xl transition duration-500">
+
+        <div class="absolute left-0 top-0 h-full w-1 bg-blue-600 rounded-l-3xl"></div>
+
+        <div class="pl-0 sm:pl-6">
+
+            <h3 class="text-2xl font-semibold text-gray-900 mb-8">
+                Contact Channels
+            </h3>
+
+            <div class="space-y-5">
+
+                <a href="mailto:support@workden.online"
+                    class="flex items-center gap-4 p-5 bg-white rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-md transition">
+
+                    <div class="w-11 h-11 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-headset"></i>
+                    </div>
+
+                    <div>
+                        <p class="text-xs text-gray-500">Support Email</p>
+                        <p class="font-semibold text-gray-900">
+                            support@workden.online
+                        </p>
+                    </div>
+                </a>
+
+                <a href="mailto:info@workden.online"
+                    class="flex items-center gap-4 p-5 bg-white rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-md transition">
+
+                    <div class="w-11 h-11 bg-gray-100 text-gray-700 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+
+                    <div>
+                        <p class="text-xs text-gray-500">Info Email</p>
+                        <p class="font-semibold text-gray-900">
+                            info@workden.online
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/919262725686"
+                    class="flex items-center gap-4 p-5 bg-white rounded-xl border border-gray-200 hover:border-green-500 hover:shadow-md transition">
+
+                    <div class="w-11 h-11 bg-green-100 text-green-600 rounded-lg flex items-center justify-center">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+
+                    <div>
+                        <p class="text-xs text-gray-500">WhatsApp Support</p>
+                        <p class="font-semibold text-gray-900">
+                            +91 92627 25686
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://t.me/workden_helpdesk"
+                    class="flex items-center gap-4 p-5 bg-white rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-md transition">
+
+                    <div class="w-11 h-11 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                        <i class="fab fa-telegram-plane"></i>
+                    </div>
+
+                    <div>
+                        <p class="text-xs text-gray-500">Telegram</p>
+                        <p class="font-semibold text-gray-900">
+                            Message on Telegram
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+        <!-- BEFORE CONTACTING SUPPORT -->
+<div class="mt-24">
+
+    <div class="relative bg-gradient-to-r from-blue-50 via-white to-blue-50 border border-blue-100 rounded-3xl p-6 sm:p-10 shadow-sm">
+
+        <!-- Left Accent Bar -->
+        <div class="absolute left-0 top-0 h-full w-1 bg-blue-600 rounded-l-3xl"></div>
+
+        <div class="pl-4">
+
+            <h4 class="text-xl font-semibold text-gray-900 mb-6">
+                Before Contacting Support
+            </h4>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Item 1 -->
+                <div class="flex items-start gap-4 bg-white/70 backdrop-blur-sm p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Use your registered email address.
+                    </p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="flex items-start gap-4 bg-white/70 backdrop-blur-sm p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-receipt"></i>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Keep your payment reference ID ready (if applicable).
+                    </p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex items-start gap-4 bg-white/70 backdrop-blur-sm p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Share complete and accurate application details
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    </section>
+
+</main>
+
+
+
+
+
+
+<footer class="relative bg-gradient-to-b from-white to-blue-50 border-t border-blue-100 overflow-hidden">
+
+    <!-- Soft Glow -->
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-[350px] h-[180px] bg-blue-100 blur-3xl opacity-20"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-14 pb-8">
+
+        <!-- MAIN GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10">
+
+            <!-- Brand -->
+            <div>
+                <h2 class="text-xl font-semibold text-gray-900 tracking-tight mb-4">
+                    WorkDen
+                </h2>
+
+                <p class="text-sm text-gray-600 leading-relaxed mb-5">
+                    A verified digital task platform delivering structured online work 
+                    opportunities with transparency, secure workflow, and compliance standards.
+                </p>
+
+               <div class="flex gap-3 text-base">
+
+                <!-- Facebook -->
+                   <a href="https://www.facebook.com/people/Workden-India/61583820256534/"
+                      target="_blank" rel="noopener noreferrer"
+                      class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition">
+                     <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                <!-- Instagram -->
+                   <a href="https://www.instagram.com/workden_wfh"
+                       target="_blank" rel="noopener noreferrer"
+                        class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+               <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/in/workden-india-315391383/"
+                     target="_blank" rel="noopener noreferrer"
+                     class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition">
+                     <i class="fab fa-linkedin-in"></i>
+                 </a>
+
+            </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Quick Links
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+                    <li><a href="fees.html" class="hover:text-blue-600 transition">Membership Details</a></li>
+                    <li><a href="apply.html" class="hover:text-blue-600 transition">Apply Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Legal
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-blue-600 transition">Terms & Conditions</a></li>
+                    <li><a href="disclaimer.html" class="hover:text-blue-600 transition">Disclaimer</a></li>
+                    <li><a href="refund.html" class="hover:text-blue-600 transition">Refund Policy</a></li>
+                </ul>
+
+                <div class="mt-5 p-3 bg-white/70 backdrop-blur-md rounded-xl border border-blue-100 text-xs text-gray-600">
+                    <p class="font-semibold text-gray-800 mb-1">Business Verification</p>
+                    <p>MSME (Udyam): UDYAM-KR-03-0640514</p>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Contact
+                </h3>
+
+                <ul class="space-y-4 text-sm text-gray-600">
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-envelope text-xs"></i>
+                        </div>
+                        <span>info@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-headset text-xs"></i>
+                        </div>
+                        <span>support@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Ashok Nagar, Bangalore – 560001</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Parsuram Pur, Motihari – 845416</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar (NOW OUTSIDE GRID) -->
+        <div class="mt-10 pt-5 border-t border-blue-100">
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p class="text-center md:text-left">
+                    © 2026 <span class="font-semibold text-gray-700">WorkDen</span>. All rights reserved.
+                </p>
+                <p class="mt-2 md:mt-0 text-gray-400 text-center md:text-right">
+                    Structured Digital Task Platform
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+
+   <!-- Tidio Live Chat -->
+  <script src="//code.tidio.co/cnjmhfu6axyap6lkz6v0dayvl8qeienl.js" async></script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

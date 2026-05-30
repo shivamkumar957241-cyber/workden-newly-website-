@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ – WorkDen | Frequently Asked Questions</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta name="description" content="Find answers to common questions about WorkDen registration, task workflow, payments, approval process, and platform policies.">
+
+    <!-- Smooth Scroll + Premium White Base -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Remove unwanted reveal animations */
+        .reveal { 
+            opacity: 1 !important; 
+            transform: none !important; 
+            visibility: visible !important; 
+        }
+
+        /* VIP Hover Card */
+        .vip-card {
+            transition: all 0.35s ease;
+        }
+
+        .vip-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Premium Gradient Text */
+        .text-gradient {
+            background: linear-gradient(to right, #1e293b, #0f4c42);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Subtle Corporate Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f4c42',
+                        primaryDark: '#072e27',
+                        secondary: '#1e293b',
+                        accent: '#d4af37',
+                        bgLight: '#f8fafc',
+                        neutralLight: '#f9fafb'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-bgLight overflow-x-hidden">
+<header class="fixed w-full top-0 z-50 
+bg-white/25 backdrop-blur-2xl 
+border-b border-white/40 
+shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
+transition-all duration-500">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center gap-3">
+                    
+                    <img src="workden-logo.png" 
+                         alt="WorkDen Logo" 
+                         class="h-10 w-auto object-contain">
+
+                    <span class="font-bold text-xl text-gray-900 tracking-tight">
+                        WorkDen
+                    </span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+
+                <a href="index.html"
+                    class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Home
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+
+                <a href="services.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Services
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <!-- PRICING UPDATED -->
+                <a href="fees.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Pricing
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="blog.html"
+                    class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Blog
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+               </a>
+
+                <a href="faq.html"
+                    class="relative text-blue-600 font-semibold">
+                    FAQ
+                    <span class="absolute left-0 -bottom-1 w-full h-[2px] bg-blue-600 rounded"></span>
+                </a>
+
+
+                <a href="support.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Support
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <!-- Apply Button -->
+                <a href="apply.html"
+                     class="ml-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md shadow-md hover:shadow-xl transition-all duration-300">
+                     Apply Now
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+            <div class="md:hidden flex items-center">
+                <button onclick="toggleMobileMenu()" class="text-gray-800 p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="fixed inset-0 z-[99999] md:hidden flex flex-col gap-4 pt-24 px-6 translate-x-full transition-transform duration-300 bg-white/90 backdrop-blur-xl">
+
+        <button onclick="toggleMobileMenu()"
+                class="absolute top-6 right-6 text-gray-700 text-3xl">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <a href="index.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Home</a>
+        <a href="services.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Services</a>
+        <a href="fees.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Pricing</a>
+        <a href="blog.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Blog</a>
+        <a href="faq.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">FAQ</a>
+        <a href="support.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Support</a>
+
+        <a href="apply.html"
+           target="_blank"
+           class="mt-6 bg-blue-600 text-white text-center py-3 rounded-xl font-semibold shadow hover:bg-blue-700 transition duration-300">
+           Apply Now
+      </a>
+
+    </div>
+
+</header>
+
+
+    <main class="flex-grow pt-20">
+       <div class="bg-white pt-20 pb-10 text-center border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4">
+        <h1 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-2 tracking-tight">
+            Frequently Asked Questions
+        </h1>
+        
+        <p class="text-sm md:text-base text-gray-500 max-w-xl mx-auto leading-snug">
+            Common queries about applications, tasks, and WorkDen policies.
+        </p>
+    </div>
+</div>
+
+        <div class="max-w-4xl mx-auto px-4 py-16">
+            
+            <div class="space-y-4">
+                
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group" onclick="toggleFaq(1)">
+                        <span class="font-bold text-secondary group-hover:text-primary transition">1. How can I apply on WorkDen?</span>
+                        <i id="icon-1" class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-1" class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+                        <div class="p-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+                            You can apply through our official application portal by clicking the "Apply Now" button. You will need to provide basic details and complete the verification steps.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group" onclick="toggleFaq(2)">
+                        <span class="font-bold text-secondary group-hover:text-primary transition">2. Is there any registration or portal access fee?</span>
+                        <i id="icon-2" class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-2" class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+                        <div class="p-6 text-gray-600 text-sm border-t border-gray-100">
+                            Yes, WorkDen charges a one-time portal access fee for account setup, infrastructure, and secure verification. Please refer to our Pricing page for details.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group" onclick="toggleFaq(3)">
+                        <span class="font-bold text-secondary group-hover:text-primary transition">3. How long does application approval take?</span>
+                        <i id="icon-3" class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-3" class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+                        <div class="p-6 text-gray-600 text-sm border-t border-gray-100">
+                            The review and approval process typically takes 2 to 3 business hours after successful verification and fee payment.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group" onclick="toggleFaq(4)">
+                        <span class="font-bold text-secondary group-hover:text-primary transition">4. Can my application be rejected?</span>
+                        <i id="icon-4" class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-4" class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+                        <div class="p-6 text-gray-600 text-sm border-t border-gray-100">
+                            Yes, applications can be rejected if verification fails, if the applicant does not meet our internal quality criteria, or if any fake screenshot, edited document, or fraudulent payment proof is submitted. Any attempt to submit fake payment confirmations will result in immediate rejection.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group" onclick="toggleFaq(5)">
+                        <span class="font-bold text-secondary group-hover:text-primary transition">5. What type of tasks are available on WorkDen?</span>
+                        <i id="icon-5" class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-5" class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+                        <div class="p-6 text-gray-600 text-sm border-t border-gray-100">
+                            Available work includes Data Entry, Form Filling, Content Review, Chat Support, and Email-based administrative tasks.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group" onclick="toggleFaq(6)">
+                        <span class="font-bold text-secondary group-hover:text-primary transition">6. How are tasks assigned to users?</span>
+                        <i id="icon-6" class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-6" class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+                        <div class="p-6 text-gray-600 text-sm border-t border-gray-100">
+                            Tasks are allocated based on plan level, user accuracy ratings, and project availability. Premium users often get priority allocation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group" onclick="toggleFaq(7)">
+                        <span class="font-bold text-secondary group-hover:text-primary transition">7. What happens if my task is rejected?</span>
+                        <i id="icon-7" class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-7" class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+                        <div class="p-6 text-gray-600 text-sm border-t border-gray-100">
+                            Rejected tasks do not qualify for credit. Multiple rejections due to poor accuracy can lead to temporary account suspension.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group" onclick="toggleFaq(8)">
+                        <span class="font-bold text-secondary group-hover:text-primary transition">8. Does WorkDen guarantee income or fixed earnings?</span>
+                        <i id="icon-8" class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-8" class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+                        <div class="p-6 text-gray-600 text-sm border-t border-gray-100">
+                            No. WorkDen is a task-based platform. Earnings depend entirely on your accuracy and the volume of tasks you successfully complete.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group" onclick="toggleFaq(9)">
+                        <span class="font-bold text-secondary group-hover:text-primary transition">9. Are registration or portal access fees refundable?</span>
+                        <i id="icon-9" class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-9" class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+                        <div class="p-6 text-gray-600 text-sm border-t border-gray-100">
+                            No. The fee covers setup, verification, and portal access costs, and is non-refundable under any circumstances.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none group" onclick="toggleFaq(10)">
+                        <span class="font-bold text-secondary group-hover:text-primary transition">10. How can I contact WorkDen support?</span>
+                        <i id="icon-10" class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-10" class="max-h-0 overflow-hidden transition-all duration-300 bg-gray-50">
+                        <div class="p-6 text-gray-600 text-sm border-t border-gray-100">
+                            You can reach us via email at support@workden.online or use the contact form on our Support page.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SUPPORT CTA -->
+<div class="mt-28 relative overflow-hidden rounded-3xl">
+
+    <!-- Background Gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-700"></div>
+
+    <!-- Soft Overlay Glow -->
+    <div class="absolute -top-20 -right-20 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+
+    <div class="relative p-14 text-center text-white">
+
+        <h3 class="text-3xl font-semibold mb-4 tracking-tight">
+            Still Need Help?
+        </h3>
+
+        <p class="text-blue-100 mb-10 text-base max-w-2xl mx-auto">
+            Contact our support team for verification and queries.
+        </p>
+
+        <a href="support.html"
+           class="inline-block bg-white text-blue-700 font-semibold px-10 py-3.5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition duration-300">
+            Contact Support
+        </a>
+
+    </div>
+
+</div>
+
+
+        </div>
+    </main>
+
+<footer class="relative bg-gradient-to-b from-white to-blue-50 border-t border-blue-100 overflow-hidden">
+
+    <!-- Soft Glow -->
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-[350px] h-[180px] bg-blue-100 blur-3xl opacity-20"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-14 pb-8">
+
+        <!-- MAIN GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Brand -->
+            <div>
+                <h2 class="text-xl font-semibold text-gray-900 tracking-tight mb-4">
+                    WorkDen
+                </h2>
+
+                <p class="text-sm text-gray-600 leading-relaxed mb-5">
+                    A verified digital task platform delivering structured online work 
+                    opportunities with transparency, secure workflow, and compliance standards.
+                </p>
+
+               <div class="flex gap-3 text-base">
+
+                <!-- Facebook -->
+                   <a href="https://www.facebook.com/people/Workden-India/61583820256534/"
+                      target="_blank" rel="noopener noreferrer"
+                      class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition">
+                     <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                <!-- Instagram -->
+                   <a href="https://www.instagram.com/workden_wfh"
+                       target="_blank" rel="noopener noreferrer"
+                        class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+               <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/in/workden-india-315391383/"
+                     target="_blank" rel="noopener noreferrer"
+                     class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition">
+                     <i class="fab fa-linkedin-in"></i>
+                 </a>
+
+            </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Quick Links
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+                    <li><a href="fees.html" class="hover:text-blue-600 transition">Membership Details</a></li>
+                    <li><a href="apply.html" class="hover:text-blue-600 transition">Apply Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Legal
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-blue-600 transition">Terms & Conditions</a></li>
+                    <li><a href="disclaimer.html" class="hover:text-blue-600 transition">Disclaimer</a></li>
+                    <li><a href="refund.html" class="hover:text-blue-600 transition">Refund Policy</a></li>
+                </ul>
+
+                <div class="mt-5 p-3 bg-white/70 backdrop-blur-md rounded-xl border border-blue-100 text-xs text-gray-600">
+                    <p class="font-semibold text-gray-800 mb-1">Business Verification</p>
+                    <p>MSME (Udyam): UDYAM-KR-03-0640514</p>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Contact
+                </h3>
+
+                <ul class="space-y-4 text-sm text-gray-600">
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-envelope text-xs"></i>
+                        </div>
+                        <span>info@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-headset text-xs"></i>
+                        </div>
+                        <span>support@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Ashok Nagar, Bangalore – 560001</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Parsuram Pur, Motihari – 845416</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar (NOW OUTSIDE GRID) -->
+        <div class="mt-10 pt-5 border-t border-blue-100">
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p class="text-center md:text-left">
+                    © 2026 <span class="font-semibold text-gray-700">WorkDen</span>. All rights reserved.
+                </p>
+                <p class="mt-2 md:mt-0 text-gray-400 text-center md:text-right">
+                    Structured Digital Task Platform
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+   <!-- Tidio Live Chat -->
+  <script src="//code.tidio.co/cnjmhfu6axyap6lkz6v0dayvl8qeienl.js" async></script>
+
+
+    <script>
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            // Close all others (Optional - remove if you want multiple open)
+            document.querySelectorAll('[id^="faq-"]').forEach(item => {
+                if(item.id !== `faq-${id}`) {
+                    item.style.maxHeight = null;
+                }
+            });
+            document.querySelectorAll('[id^="icon-"]').forEach(ico => {
+                if(ico.id !== `icon-${id}`) {
+                    ico.style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle current
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

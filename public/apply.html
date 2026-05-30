@@ -1,0 +1,1190 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply – WorkDen</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script>
+tailwind.config = {
+theme:{
+extend:{
+colors:{
+primary:'#2563eb',
+primaryDark:'#1d4ed8'
+},
+fontFamily:{
+sans:['Inter','sans-serif'],
+heading:['Poppins','sans-serif']
+}
+}
+}
+}
+</script>
+</head>
+
+
+<body class="bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen flex flex-col">
+
+<header class="fixed w-full top-0 z-50 
+bg-white/25 backdrop-blur-2xl 
+border-b border-white/40 
+shadow-[0_8px_30px_rgba(0,0,0,0.08)] 
+transition-all duration-500">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center gap-3">
+                    
+                    <img src="workden-logo.png" 
+                         alt="WorkDen Logo" 
+                         class="h-10 w-auto object-contain">
+
+                    <span class="font-bold text-xl text-gray-900 tracking-tight">
+                        WorkDen
+                    </span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+
+                <a href="index.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                   Home
+                   <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+
+                <a href="services.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Services
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <!-- PRICING UPDATED -->
+                <a href="fees.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Pricing
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="blog.html"
+                    class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Blog
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+               </a>
+
+                <a href="faq.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    FAQ
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <a href="support.html"
+                   class="relative text-gray-800 hover:text-blue-600 transition group">
+                    Support
+                    <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+
+                <!-- Apply Button -->
+                <a href="apply.html"
+                     class="ml-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md shadow-md hover:shadow-xl transition-all duration-300">
+                     Apply Now
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+            <div class="md:hidden flex items-center">
+                <button onclick="toggleMobileMenu()" class="text-gray-800 p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="fixed inset-0 z-[99999] md:hidden flex flex-col gap-4 pt-24 px-6 translate-x-full transition-transform duration-300 bg-white/90 backdrop-blur-xl">
+
+        <button onclick="toggleMobileMenu()"
+                class="absolute top-6 right-6 text-gray-700 text-3xl">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <a href="index.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Home</a>
+        <a href="services.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Services</a>
+        <a href="fees.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Pricing</a>
+        <a href="blog.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Blog</a>
+        <a href="faq.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">FAQ</a>
+        <a href="support.html" class="w-full px-6 py-4 rounded-lg bg-gray-100 font-semibold">Support</a>
+
+        <a href="apply.html"
+           target="_blank"
+            class="mt-6 bg-blue-600 text-white text-center py-3 rounded-xl font-semibold shadow hover:bg-blue-700 transition duration-300">
+           Apply Now
+      </a>
+
+    </div>
+
+</header>
+
+<main class="flex-1 pt-24 md:pt-32 pb-16 md:pb-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="apply-page">
+
+  <!-- ================= HEADER ================= -->
+<div class="relative bg-white/70 backdrop-blur-xl border border-blue-100 rounded-3xl p-6 sm:p-10 md:p-12 shadow-lg mb-10 sm:mb-16">
+
+<div class="absolute left-0 top-0 h-full w-1 bg-blue-600 rounded-l-3xl"></div>
+
+<div class="pl-6 text-center">
+<h1 class="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-gray-900">
+WorkDen Application
+</h1>
+<p class="text-gray-600 mt-3 text-sm sm:text-base md:text-lg">
+Complete your structured onboarding process to access the platform.
+</p>
+</div>
+
+</div>
+
+
+<!-- ================= PROGRESS BAR ================= -->
+<div class="relative mb-20">
+
+<div class="absolute top-5 left-0 right-0 h-1 bg-blue-100 rounded-full"></div>
+
+<div id="progressFill"
+class="absolute top-5 left-0 h-1 bg-blue-600 rounded-full transition-all duration-500"
+style="width:20%"></div>
+
+<div class="relative flex justify-between overflow-x-auto pb-4">
+
+<div class="progress-step active min-w-[70px]">
+<div class="circle">1</div>
+<span>Personal</span>
+</div>
+
+<div class="progress-step">
+<div class="circle">2</div>
+<span>Work</span>
+</div>
+
+<div class="progress-step">
+<div class="circle">3</div>
+<span>Plan</span>
+</div>
+
+<div class="progress-step">
+<div class="circle">4</div>
+<span>Payment</span>
+</div>
+
+<div class="progress-step">
+<div class="circle">5</div>
+<span>Finish</span>
+</div>
+
+</div>
+</div>
+
+
+<form action="https://api.web3forms.com/submit" method="POST" class="space-y-16">
+
+<input type="hidden" name="access_key" value="3aa42970-62a2-44d3-a76d-e740381761a0">
+<input type="hidden" name="Selected Plan" id="selectedPlan">
+
+
+<!-- ================= STEP 1 ================= -->
+<section class="step bg-gradient-to-br from-blue-50 via-white to-blue-50 border border-blue-100 rounded-3xl p-6 sm:p-8 md:p-10 shadow-md hover:shadow-xl transition duration-500 relative">
+
+    <!-- Left Accent Bar -->
+    <div class="absolute left-0 top-0 h-full w-1 bg-blue-600 rounded-l-3xl"></div>
+
+    <div class="pl-6">
+
+        <h2 class="text-2xl font-semibold text-gray-900 mb-2">
+            Personal Information
+        </h2>
+
+        <p class="text-sm text-gray-500 mb-10">
+            Please enter your details exactly as they appear on your Aadhar card.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Full Name -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">
+                    Full Name (as per Aadhar) *
+                </label>
+                <input type="text" name="Full Name" required
+                class="input-premium"
+                placeholder="Enter your full name">
+            </div>
+
+            <!-- Mobile -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">
+                    Mobile Number (WhatsApp preferred) *
+                </label>
+                <input type="tel" name="Mobile Number" required
+                class="input-premium"
+                placeholder="Enter 10-digit mobile number">
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">
+                    Email Address *
+                </label>
+                <input type="email" name="Email Address" required
+                class="input-premium"
+                placeholder="Enter your email address">
+            </div>
+
+            <!-- Gender -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">
+                    Gender (Optional)
+                </label>
+                <select name="Gender" class="input-premium">
+                    <option value="">Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <!-- DOB -->
+            <div class="md:col-span-2">
+                <label class="block text-sm font-medium text-gray-700 mb-3">
+                    Date of Birth *
+                </label>
+                <input type="date" name="Date of Birth" required
+                class="input-premium">
+            </div>
+
+        </div>
+
+        <div class="flex justify-end mt-12">
+            <button type="button" onclick="nextStep(2)"
+            class="bg-blue-600 text-white px-10 py-3 rounded-xl font-semibold shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300">
+                Continue →
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= STEP 2 ================= -->
+<section class="step hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 border border-blue-100 rounded-3xl p-6 sm:p-8 md:p-10 shadow-md hover:shadow-xl transition duration-500 relative">
+
+    <!-- Left Accent Bar -->
+    <div class="absolute left-0 top-0 h-full w-1 bg-blue-600 rounded-l-3xl"></div>
+
+    <div class="pl-6">
+
+        <h2 class="text-2xl font-semibold text-gray-900 mb-2">
+            Work Preferences
+        </h2>
+
+        <p class="text-sm text-gray-500 mb-10">
+            Tell us about your skills and availability.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Preferred Work -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">
+                    Preferred Work Type *
+                </label>
+                <select name="Preferred Work Type" required class="input-premium">
+                    <option value="">Select your preferred work</option>
+                    <option>Data Entry</option>
+                    <option>Content Writing</option>
+                    <option>Form Filling</option>
+                    <option>Email-Based Tasks</option>
+                    <option>Chat Support</option>
+                    <option>Document Formatting</option>
+                    <option>All</option>
+                </select>
+            </div>
+
+            <!-- Experience -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">
+                    Experience Level *
+                </label>
+                <select name="Experience Level" required class="input-premium">
+                    <option value="">Select experience level</option>
+                    <option>Beginner – New to online work</option>
+                    <option>Intermediate – 1-2 years experience</option>
+                    <option>Experienced – 3+ years experience</option>
+                </select>
+            </div>
+
+            <!-- Availability -->
+            <div class="md:col-span-2">
+                <label class="block text-sm font-medium text-gray-700 mb-3">
+                    Daily Availability *
+                </label>
+                <select name="Daily Availability" required class="input-premium">
+                    <option value="">Select availability</option>
+                    <option>2-4 Hours</option>
+                    <option>4-6 Hours</option>
+                    <option>6+ Hours</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="flex justify-between items-center gap-4 mt-10">
+
+            <button type="button" onclick="nextStep(1)"
+            class="w-1/2 bg-gray-200 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-300 transition">
+                Back
+            </button>
+
+            <button type="button" onclick="nextStep(3)"
+            class="w-1/2 bg-blue-600 text-white py-3 rounded-xl font-semibold shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300">
+                Continue →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= STEP 3 ================= -->
+<section class="step hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 border border-blue-100 rounded-3xl p-5 sm:p-8 md:p-10 shadow-md relative">
+
+    <div class="absolute left-0 top-0 h-full w-1 bg-blue-600 rounded-l-3xl"></div>
+
+    <div class="pl-4 sm:pl-6">
+
+        <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-2">
+            Choose Your Perfect Plan
+        </h2>
+
+        <p class="text-xs sm:text-sm text-gray-500 text-center mb-8 sm:mb-12">
+            Select the plan that best fits your needs and start your professional journey with WorkDen.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- STARTER PLAN -->
+    <div onclick="selectPlan(249,this)"
+    class="plan-card flex flex-col justify-between border-2 border-blue-200 rounded-2xl p-6 bg-white transition-all duration-300 hover:shadow-xl">
+
+        <div>
+            <h3 class="text-xl font-bold text-gray-900">Starter Plan</h3>
+
+            <div class="mt-3 mb-6">
+                <span class="text-4xl font-bold text-blue-600">₹249</span>
+                <span class="text-gray-500 text-sm">/one-time</span>
+            </div>
+
+            <ul class="space-y-4 text-sm text-gray-700">
+
+                <!-- Task Access -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-layer-group text-blue-600"></i>
+                    Access to 2 Task Categories
+                </li>
+
+                <!-- ID Card -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-id-badge text-blue-600"></i>
+                    Digital WorkDen ID Card
+                </li>
+
+                <!-- Training -->
+                <li class="flex items-center gap-3 text-gray-400">
+                    <i class="fas fa-graduation-cap"></i>
+                    No Training Module
+                </li>
+
+                <!-- Support -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-envelope text-blue-600"></i>
+                    Email Support Only
+                </li>
+
+                <!-- Approval -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-clock text-blue-600"></i>
+                    Standard Task Approval
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="mt-6 text-blue-600 font-semibold text-sm">
+            Select Plan
+        </div>
+    </div>
+
+
+    <!-- MOST POPULAR -->
+    <div onclick="selectPlan(499,this)"
+    class="plan-card flex flex-col justify-between border-2 border-blue-600 rounded-2xl p-6 bg-white transition-all duration-300 hover:shadow-xl relative">
+
+        <div class="absolute -top-2 right-4 bg-blue-600 text-white text-[10px] px-3 py-1 rounded-full shadow">
+            MOST POPULAR
+        </div>
+
+        <div>
+            <h3 class="text-xl font-bold text-gray-900">Full Access</h3>
+
+            <div class="mt-3 mb-6">
+                <span class="text-4xl font-bold text-blue-600">₹499</span>
+                <span class="text-gray-500 text-sm">/one-time</span>
+            </div>
+
+            <ul class="space-y-4 text-sm text-gray-700">
+
+                <!-- Task Access -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-layer-group text-green-600"></i>
+                    Access to All Task Categories
+                </li>
+
+                <!-- ID Card -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-id-badge text-green-600"></i>
+                    Digital WorkDen ID Card
+                </li>
+
+                <!-- Training -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-video text-green-600"></i>
+                    Basic Training Module Included
+                </li>
+
+                <!-- Support -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-envelope-open-text text-blue-600"></i>
+                    Priority Email Support
+                </li>
+
+                <!-- Approval -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-hourglass-half text-blue-600"></i>
+                    Standard Task Approval Time
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="mt-6 text-blue-600 font-semibold text-sm">
+            Select Plan
+        </div>
+    </div>
+
+
+    <!-- VIP PREMIUM -->
+    <div onclick="selectPlan(699,this)"
+    class="plan-card flex flex-col justify-between border-2 border-indigo-600 rounded-2xl p-6 bg-white transition-all duration-300 hover:shadow-xl relative">
+
+        <div class="absolute -top-2 right-4 bg-indigo-600 text-white text-[10px] px-3 py-1 rounded-full shadow">
+            VIP PREMIUM
+        </div>
+
+        <div>
+            <h3 class="text-xl font-bold text-gray-900">Ultimate Access</h3>
+
+            <div class="mt-3 mb-6">
+                <span class="text-4xl font-bold text-indigo-600">₹699</span>
+                <span class="text-gray-500 text-sm">/one-time</span>
+            </div>
+
+            <ul class="space-y-4 text-sm text-gray-700">
+
+                <!-- Task Access -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-layer-group text-green-600"></i>
+                    Full Access to All Tasks
+                </li>
+
+                <!-- ID Card -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-id-badge text-green-600"></i>
+                    Professional VIP ID Card
+                </li>
+
+                <!-- Training -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-graduation-cap text-green-600"></i>
+                    Step-by-Step Training
+                </li>
+
+                <!-- Support -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-headset text-green-600"></i>
+                    Live + Priority Support
+                </li>
+
+                <!-- Approval -->
+                <li class="flex items-center gap-3">
+                    <i class="fas fa-rocket text-indigo-600"></i>
+                    Fast Task Approval (Priority Processing)
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="mt-6 text-indigo-600 font-semibold text-sm">
+            Select Plan
+        </div>
+    </div>
+
+
+    <!-- VIP PRO -->
+<div onclick="selectPlan(999,this)"
+class="plan-card flex flex-col justify-between border-2 border-yellow-500 rounded-2xl p-6 bg-white transition-all duration-300 hover:shadow-xl relative">
+
+    <div class="absolute -top-2 right-4 bg-yellow-500 text-white text-[10px] px-3 py-1 rounded-full shadow">
+        VIP PRO
+    </div>
+
+    <div>
+        <h3 class="text-xl font-bold text-gray-900">Ultimate Pro Access</h3>
+
+        <div class="mt-3 mb-6">
+            <span class="text-4xl font-bold text-yellow-600">₹999</span>
+            <span class="text-gray-500 text-sm">/one-time</span>
+        </div>
+
+        <ul class="space-y-4 text-sm text-gray-700">
+
+            <li class="flex items-center gap-3">
+                <i class="fas fa-layer-group text-green-600"></i>
+                Full Access to All Tasks
+            </li>
+
+            <li class="flex items-center gap-3">
+                <i class="fas fa-id-badge text-green-600"></i>
+                Professional VIP ID Card
+            </li>
+
+            <li class="flex items-center gap-3">
+                <i class="fas fa-video text-green-600"></i>
+                Complete Training + Live Webinar
+            </li>
+
+            <li class="flex items-center gap-3">
+                <i class="fas fa-headset text-green-600"></i>
+                Live + Priority Support
+            </li>
+
+            <li class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-green-600"></i>
+                Easy & Less Tasks
+            </li>
+
+            <li class="flex items-center gap-3">
+                <i class="fas fa-rocket text-yellow-600"></i>
+                Fast Task Approval
+            </li>
+
+            <li class="flex items-center gap-3">
+                <i class="fas fa-wallet text-yellow-600"></i>
+                Minimum Withdrawal: ₹500 | No Maximum Limit
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="mt-6 text-yellow-600 font-semibold text-sm">
+        Select Plan
+    </div>
+</div>
+
+</div>
+
+        <div class="flex justify-between gap-4 mt-10">
+            <button type="button" onclick="nextStep(2)"
+            class="w-1/2 bg-gray-200 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-300 transition">
+                Back
+            </button>
+
+            <button type="button" onclick="nextStep(4)"
+            class="w-1/2 bg-blue-600 text-white py-3 rounded-xl font-semibold shadow-md hover:bg-blue-700 transition">
+                Continue →
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= STEP 4 ================= -->
+<section class="step hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 border border-blue-100 rounded-3xl p-6 sm:p-8 md:p-10 shadow-md relative">
+
+    <div class="absolute left-0 top-0 h-full w-1 bg-blue-600 rounded-l-3xl"></div>
+
+    <div class="pl-6">
+
+        <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-2">
+            Secure Payment
+        </h2>
+
+        <p class="text-sm text-gray-500 text-center mb-10">
+            Complete your registration by making the secure one-time payment.
+        </p>
+
+        <!-- Secure Payment Box -->
+        <div class="bg-white border border-blue-100 rounded-2xl p-8 text-center shadow-sm mb-10">
+
+            <button type="button"
+            onclick="startRazorpay()"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl text-lg font-semibold shadow-md hover:shadow-lg transition duration-300">
+                Proceed to Secure Payment →
+            </button>
+
+            <p class="text-xs text-gray-500 mt-4">
+                🔒 100% Secure Payment powered by Razorpay
+            </p>
+
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between gap-4 mt-10">
+
+            <button type="button"
+            onclick="nextStep(3)"
+            class="w-1/2 bg-gray-200 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-300 transition">
+                Back
+            </button>
+
+            <div class="w-1/2"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= STEP 5 ================= -->
+<section class="step hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 border border-blue-100 rounded-3xl p-6 sm:p-8 md:p-10 shadow-md relative">
+
+    <!-- Left Accent Bar -->
+    <div class="absolute left-0 top-0 h-full w-1 bg-blue-600 rounded-l-3xl"></div>
+
+    <div class="pl-6">
+
+        <h2 class="text-2xl font-semibold text-gray-900 mb-2">
+            Declaration & Agreement
+        </h2>
+
+        <p class="text-sm text-gray-500 mb-10">
+            Please review and accept the following to complete your registration.
+        </p>
+
+        <!-- Agreement Boxes -->
+        <div class="space-y-6">
+
+            <label class="flex items-start gap-4 bg-white border border-blue-100 rounded-xl p-5 cursor-pointer hover:shadow transition">
+                <input type="checkbox" required class="mt-1 accent-blue-600">
+                <span class="text-sm text-gray-700 leading-relaxed">
+                    I confirm that all information provided is true and correct.
+                </span>
+            </label>
+
+            <label class="flex items-start gap-4 bg-white border border-blue-100 rounded-xl p-5 cursor-pointer hover:shadow transition">
+                <input type="checkbox" required class="mt-1 accent-blue-600">
+                <span class="text-sm text-gray-700 leading-relaxed">
+                    I agree to WorkDen Terms & Conditions.
+                </span>
+            </label>
+
+            <label class="flex items-start gap-4 bg-white border border-blue-100 rounded-xl p-5 cursor-pointer hover:shadow transition">
+                <input type="checkbox" required class="mt-1 accent-blue-600">
+                <span class="text-sm text-gray-700 leading-relaxed">
+                    I understand that the registration fee is non-refundable after account activation.
+                </span>
+            </label>
+
+        </div>
+
+        <!-- Trust Indicators -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+
+    <!-- Secure Payment -->
+    <div class="flex items-center gap-3 bg-white border border-blue-100 rounded-xl px-4 py-3 shadow-sm hover:shadow-md transition">
+
+        <div class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-lg">
+            🔒
+        </div>
+
+        <div>
+            <h4 class="text-sm font-semibold text-gray-800">Secure Payment</h4>
+            <p class="text-xs text-gray-500">Encrypted UPI transactions</p>
+        </div>
+
+    </div>
+
+    <!-- Verified Platform -->
+    <div class="flex items-center gap-3 bg-white border border-green-100 rounded-xl px-4 py-3 shadow-sm hover:shadow-md transition">
+
+        <div class="w-9 h-9 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-lg">
+            ✔
+        </div>
+
+        <div>
+            <h4 class="text-sm font-semibold text-gray-800">Verified Platform</h4>
+            <p class="text-xs text-gray-500">Registered MSME entity</p>
+        </div>
+
+    </div>
+
+    <!-- Trusted Network -->
+    <div class="flex items-center gap-3 bg-white border border-purple-100 rounded-xl px-4 py-3 shadow-sm hover:shadow-md transition">
+
+        <div class="w-9 h-9 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 text-lg">
+            🌐
+        </div>
+
+        <div>
+            <h4 class="text-sm font-semibold text-gray-800">Trusted Network</h4>
+            <p class="text-xs text-gray-500">Structured digital ecosystem</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+        <!-- Submit Button -->
+        <button type="submit"
+        class="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl text-lg font-semibold shadow-md hover:shadow-lg transition duration-300 mt-12">
+            Complete Registration →
+        </button>
+
+    </div>
+
+</section>
+
+  </div> 
+
+  </div>
+</main>
+
+<footer class="relative bg-gradient-to-b from-white to-blue-50 border-t border-blue-100 overflow-hidden">
+
+    <!-- Soft Glow -->
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-[350px] h-[180px] bg-blue-100 blur-3xl opacity-20"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-14 pb-8">
+
+        <!-- MAIN GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Brand -->
+            <div>
+                <h2 class="text-xl font-semibold text-gray-900 tracking-tight mb-4">
+                    WorkDen
+                </h2>
+
+                <p class="text-sm text-gray-600 leading-relaxed mb-5">
+                    A verified digital task platform delivering structured online work 
+                    opportunities with transparency, secure workflow, and compliance standards.
+                </p>
+
+               <div class="flex gap-3 text-base">
+
+                <!-- Facebook -->
+                   <a href="https://www.facebook.com/people/Workden-India/61583820256534/"
+                      target="_blank" rel="noopener noreferrer"
+                      class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition">
+                     <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                <!-- Instagram -->
+                   <a href="https://www.instagram.com/workden_wfh"
+                       target="_blank" rel="noopener noreferrer"
+                        class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+               <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/in/workden-india-315391383/"
+                     target="_blank" rel="noopener noreferrer"
+                     class="w-9 h-9 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition">
+                     <i class="fab fa-linkedin-in"></i>
+                 </a>
+
+            </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Quick Links
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600 transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+                    <li><a href="fees.html" class="hover:text-blue-600 transition">Membership Details</a></li>
+                    <li><a href="apply.html" class="hover:text-blue-600 transition">Apply Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Legal
+                </h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li><a href="privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-blue-600 transition">Terms & Conditions</a></li>
+                    <li><a href="disclaimer.html" class="hover:text-blue-600 transition">Disclaimer</a></li>
+                    <li><a href="refund.html" class="hover:text-blue-600 transition">Refund Policy</a></li>
+                </ul>
+
+                <div class="mt-5 p-3 bg-white/70 backdrop-blur-md rounded-xl border border-blue-100 text-xs text-gray-600">
+                    <p class="font-semibold text-gray-800 mb-1">Business Verification</p>
+                    <p>MSME (Udyam): UDYAM-KR-03-0640514</p>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                    Contact
+                </h3>
+
+                <ul class="space-y-4 text-sm text-gray-600">
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-envelope text-xs"></i>
+                        </div>
+                        <span>info@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-headset text-xs"></i>
+                        </div>
+                        <span>support@workden.online</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Ashok Nagar, Bangalore – 560001</span>
+                    </li>
+
+                    <li class="flex gap-2 items-start">
+                        <div class="w-8 h-8 flex items-center justify-center rounded-md bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-xs"></i>
+                        </div>
+                        <span>Parsuram Pur, Motihari – 845416</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar (NOW OUTSIDE GRID) -->
+        <div class="mt-10 pt-5 border-t border-blue-100">
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p class="text-center md:text-left">
+                    © 2026 <span class="font-semibold text-gray-700">WorkDen</span>. All rights reserved.
+                </p>
+                <p class="mt-2 md:mt-0 text-gray-400 text-center md:text-right">
+                    Structured Digital Task Platform
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Tidio Live Chat -->
+<script src="//code.tidio.co/cnjmhfu6axyap6lkz6v0dayvl8qeienl.js" async></script>
+
+<script>
+
+function nextStep(step){
+
+    const steps = document.querySelectorAll('.step');
+    const totalSteps = steps.length;
+
+    // Current visible step detect karo
+    let currentIndex = 0;
+    steps.forEach((s,i)=>{
+        if(!s.classList.contains('hidden')){
+            currentIndex = i;
+        }
+    });
+
+    // ✅ STEP 3 SPECIAL CHECK (Plan selection required)
+    if(currentIndex === 2 && step === 4){
+        const selectedPlan = document.getElementById('selectedPlan').value;
+        if(!selectedPlan){
+            alert("⚠ Please select a membership plan to continue.");
+            return;
+        }
+    }
+
+    // Agar forward move kar rahe ho toh validation karo
+    if(step-1 > currentIndex){
+
+        const currentStep = steps[currentIndex];
+        const inputs = currentStep.querySelectorAll('input, select, textarea');
+
+        for(let input of inputs){
+            if(!input.checkValidity()){
+                input.reportValidity();
+                return;
+            }
+        }
+    }
+
+    // Step change
+    steps.forEach(s=>s.classList.add('hidden'));
+    steps[step-1].classList.remove('hidden');
+
+    // Progress bar update
+    let percent = (step/totalSteps)*100;
+    document.getElementById('progressFill').style.width = percent + "%";
+
+    document.querySelectorAll('.progress-step').forEach((el,i)=>{
+        el.classList.remove('active');
+        if(i < step) el.classList.add('active');
+    });
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+
+
+function selectPlan(amount, el){
+
+    // Selected plan value store karo
+    document.getElementById('selectedPlan').value = amount;
+
+    // Pehle sab plan cards se highlight remove karo
+    document.querySelectorAll('.plan-card').forEach(c=>{
+        c.classList.remove(
+            'border-blue-600',
+            'bg-blue-50',
+            'shadow-2xl',
+            'ring-2',
+            'ring-blue-500'
+        );
+    });
+
+    // Jo plan click hua hai usko highlight karo
+    el.classList.add(
+        'border-blue-600',
+        'bg-blue-50',
+        'shadow-2xl',
+        'ring-2',
+        'ring-blue-500'
+    );
+}
+</script>
+    
+
+
+<style>
+/* 🔥 ONLY CHANGE: CSS SCOPED */
+.apply-page .input{
+width:100%;
+padding:14px;
+border-radius:14px;
+border:1px solid #e2e8f0;
+outline:none;
+transition:0.3s;
+}
+.apply-page .input:focus{
+border-color:#2563eb;
+box-shadow:0 0 0 3px rgba(37,99,235,0.15);
+}
+
+.apply-page .btn-primary{
+background:#2563eb;
+color:#fff;
+padding:12px 28px;
+border-radius:14px;
+font-weight:600;
+}
+
+.apply-page .btn-secondary{
+background:#e2e8f0;
+padding:12px 28px;
+border-radius:14px;
+font-weight:600;
+}
+
+.apply-page .progress-step{
+display:flex;
+flex-direction:column;
+align-items:center;
+font-size:13px;
+color:#64748b;
+font-weight:500;
+}
+
+.apply-page .progress-step .circle{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#e2e8f0;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:600;
+margin-bottom:8px;
+transition:0.3s;
+}
+
+.apply-page .progress-step.active .circle{
+background:#2563eb;
+color:#fff;
+box-shadow:0 0 0 6px rgba(37,99,235,0.15);
+}
+
+.apply-page .progress-step.active{
+color:#1e293b;
+}
+
+/* PREMIUM INPUT */
+.apply-page .input-premium{
+width:100%;
+height:52px;
+padding:0 16px;
+border-radius:14px;
+border:1px solid #dbeafe;
+background:#ffffff;
+font-size:14px;
+transition:all 0.25s ease;
+box-shadow:0 2px 6px rgba(0,0,0,0.03);
+}
+
+.apply-page .input-premium:focus{
+border-color:#2563eb;
+box-shadow:0 0 0 4px rgba(37,99,235,0.12);
+outline:none;
+}
+
+.apply-page select.input-premium{
+appearance:none;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2364748b' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.1 1.02l-4.25 4.5a.75.75 0 01-1.1 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+background-repeat:no-repeat;
+background-position:right 12px center;
+background-size:16px;
+}
+</style>
+
+
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById("mobile-menu");
+
+    if (menu.classList.contains("translate-x-full")) {
+        menu.classList.remove("translate-x-full");
+        menu.classList.add("translate-x-0");
+    } else {
+        menu.classList.add("translate-x-full");
+        menu.classList.remove("translate-x-0");
+    }
+}
+</script>
+
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+function startRazorpay(){
+
+    const amount = document.getElementById('selectedPlan').value;
+
+    if(!amount){
+        alert("⚠ Please select a membership plan first.");
+        return;
+    }
+
+    // Validate current step inputs before payment
+    const currentStep = document.querySelector('.step:not(.hidden)');
+    const inputs = currentStep.querySelectorAll('input, select, textarea');
+
+    for(let input of inputs){
+        if(!input.checkValidity()){
+            input.reportValidity();
+            return;
+        }
+    }
+
+    var options = {
+        "key": "rzp_live_SMD4oIoMldhyzx",  
+        "amount": amount * 100,
+        "currency": "INR",
+        "name": "WorkDen",
+        "description": "WorkDen Registration Fee",
+        "theme": { "color": "#2563eb" },
+
+        "prefill": {
+            "name": document.querySelector('input[name=\"Full Name\"]').value,
+            "email": document.querySelector('input[name=\"Email Address\"]').value,
+            "contact": document.querySelector('input[name=\"Mobile Number\"]').value
+        },
+
+        "handler": function (response){
+
+            // Razorpay Payment ID hidden field me add karo
+            let paymentInput = document.createElement("input");
+            paymentInput.type = "hidden";
+            paymentInput.name = "Razorpay Payment ID";
+            paymentInput.value = response.razorpay_payment_id;
+
+            document.querySelector("form").appendChild(paymentInput);
+
+            // Payment success ke baad Step 5 open karo
+            nextStep(5);
+        },
+
+        "modal": {
+            "ondismiss": function(){
+                console.log("Payment popup closed");
+            }
+        }
+    };
+
+    var rzp = new Razorpay(options);
+    rzp.open();
+}
+</script>
+
+</body>
+</html>
