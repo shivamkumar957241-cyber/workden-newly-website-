@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build && npm run export"
+  publish = "out"
+
+# Optional redirects for clean URLs (handled by next.config rewrites)
+[[redirects]]
+  from = "/blogs/:slug"
+  to = "/blogs/:slug.html"
+  status = 200
+  force = true
