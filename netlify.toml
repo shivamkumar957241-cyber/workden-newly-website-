@@ -27,3 +27,9 @@
   to = "/apply/"
   status = 301
   force = true
+[[redirects]]
+  from = "/apply/"
+  to = "/apply.html"
+  status = 301
+  force = true
+
