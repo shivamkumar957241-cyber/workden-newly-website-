@@ -8,3 +8,17 @@
   to = "/blogs/:slug.html"
   status = 200
   force = true
+
+# Force /blog to /blog/
+[[redirects]]
+  from = "/blog"
+  to = "/blog/"
+  status = 301
+  force = true
+
+# Remove old static blog page if accessed
+[[redirects]]
+  from = "/blog.html"
+  to = "/blog/"
+  status = 301
+  force = true
